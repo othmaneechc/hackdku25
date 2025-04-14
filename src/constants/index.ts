@@ -1,12 +1,12 @@
 import { Icons } from "@/components/icons";
 import { siteConfig } from "@/config/site";
-import { Calendar, CheckCircle2, Home, PersonStanding, Rss } from "lucide-react";
+import { Calendar, CheckCircle2, Home, PersonStanding } from "lucide-react";
 
 export const NAV_LIST = [
   { label: "Home", path: "/", icon: Home },
   { label: "Timeline", path: "/timeline", icon: Calendar },
   { label: "Instructions", path: "/instructions", icon: CheckCircle2 },
-  { label: "Blog", path: "/blog", icon: Rss },
+  // { label: "Blog", path: "/blog", icon: Rss },
   { label: "Staff", path: "/about", icon: PersonStanding },
 ];
 
