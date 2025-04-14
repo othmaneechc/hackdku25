@@ -27,6 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "velite.d.ts",
     "./.velite"
   ],
   "exclude": ["node_modules"]
