@@ -10,7 +10,7 @@ const steps = [
   { number: 7, title: 'Present your solution' }
 ];
 
-export const InstructionsIndex = () => {
+export default function Instructions() {
   return (
     <main>
       {/* <Container>
@@ -38,5 +38,3 @@ export const InstructionsIndex = () => {
     </main>
   );
 };
-
-export default InstructionsIndex;
