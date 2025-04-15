@@ -2,7 +2,7 @@ import PageHeader from "@/components/page-header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "timeline",
+  title: "Timeline",
 };
 
 export default function TimelinePage() {

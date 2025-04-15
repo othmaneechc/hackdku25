@@ -4,10 +4,10 @@ import { Calendar, CheckCircle2, Home, PersonStanding } from "lucide-react";
 
 export const NAV_LIST = [
   { label: "Home", path: "/", icon: Home },
-  { label: "Timeline", path: "/timeline", icon: Calendar },
+  { label: "Calendar", path: "/timeline", icon: Calendar },
   { label: "Instructions", path: "/instructions", icon: CheckCircle2 },
   // { label: "Blog", path: "/blog", icon: Rss },
-  { label: "Staff", path: "/about", icon: PersonStanding },
+  { label: "Team", path: "/about", icon: PersonStanding },
 ];
 
 export const SOCIALS = [

@@ -1,8 +1,12 @@
 "use client";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect } from "react";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+
+export interface SplashProps {
+  backgroundOnly?: boolean;
+}
 
 class Pixel {
   private width: number;
@@ -128,8 +132,7 @@ const PixelCanvas = () => {
         for (let y = 0; y < canvas.height; y += gap) {
           const color = colors[Math.floor(Math.random() * colors.length)];
           const delay = Math.sqrt(
-            Math.pow(x - canvas.width / 2, 2) +
-              Math.pow(y - canvas.height / 2, 2)
+            Math.pow(x - canvas.width / 2, 2) + Math.pow(y - canvas.height / 2, 2)
           );
           pixels.push(new Pixel(canvas, ctx, x, y, color, speed, delay));
         }
@@ -157,56 +160,58 @@ const PixelCanvas = () => {
   return null;
 };
 
-export default function Splash() {
+export default function Splash({ backgroundOnly = false }: SplashProps) {
   return (
     <div className="relative">
-      <div
-        id="pixel-canvas-container"
-        className="absolute inset-0 pointer-events-none"
-      />
-      <div className="container flex max-w-4xl flex-col items-center gap-8 rounded-3xl text-center xl:mt-0 relative z-10">
-        <br />
-        <h1 className="text-6xl font-mono text-blue-800 dark:text-white font-bold sm:text-7xl md:text-8xl leading-none trailing-none">
-          <span className="transition-all hover:text-violet-600 dark:hover:text-violet-500 ">
-            HΔCK
-          </span>
+      {/* Pixel canvas background */}
+      <div id="pixel-canvas-container" className="absolute inset-0 pointer-events-none" />
+      
+      {/* Render splash text and links only if backgroundOnly is false */}
+      {!backgroundOnly && (
+        <div className="container flex max-w-4xl flex-col items-center gap-8 rounded-3xl text-center xl:mt-0 relative z-10">
           <br />
-          &nbsp;
-          <span className="align-super text-3xl tracking-[-0.1rem] italic font-helvetica transition-all hover:text-yellow-500 dark:hover:text-yellow-400 sm:text-5xl leading-none trailing-none">
-            2025
-          </span>
-          <span className="animate-pulse font-code transition-colors hover:text-green-500 text-6xl sm:text-7xl md:text-8xl">
-            &lt;
-          </span>
-          <span className="font-code text-primary text-6xl sm:text-7xl md:text-8xl leading-none trailing-none transition-colors hover:text-blue-600 dark:hover:text-blue-600">
-            DKU
-          </span>
-          <span className="animate-pulse font-code transition-colors hover:text-green-500 text-6xl sm:text-7xl md:text-8xl">
-            &gt;
-          </span>
-        </h1>
-        <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 font-mono">
-          <Link
-            href="/sponsor"
-            className={cn(
-              buttonVariants({ size: "lg", variant: "secondary" }),
-              "text-xl rounded-xs font-bold backdrop-blur-sm hover:font-extralight hover:text-amber-600 border border-amber-500 transition-all hover:shadow-xl hover:shadow-amber-300"
-            )}
-          >
-            SPONSOR
-          </Link>
-          <Link
-            href="/register"
-            className={cn(
-              buttonVariants({ size: "lg", variant: "secondary" }),
-              "text-xl rounded-xs font-bold hover:backdrop-blur-sm bg-blue-600 text-white hover:font-extralight hover:text-blue-600 border border-blue-400 transition-all hover:shadow-xl hover:shadow-blue-300"
-            )}
-          >
-            SIGN UP
-          </Link>
+          <h1 className="text-6xl font-mono text-blue-800 dark:text-white font-bold sm:text-7xl md:text-8xl leading-none">
+            <span className="transition-all hover:text-violet-600 dark:hover:text-violet-500">
+              HΔCK
+            </span>
+            <br />
+            &nbsp;
+            <span className="align-super text-3xl tracking-[-0.1rem] italic font-helvetica transition-all hover:text-yellow-500 dark:hover:text-yellow-400 sm:text-5xl leading-none">
+              2025
+            </span>
+            <span className="animate-pulse font-code transition-colors hover:text-green-500 text-6xl sm:text-7xl md:text-8xl">
+              &lt;
+            </span>
+            <span className="font-code text-primary text-6xl sm:text-7xl md:text-8xl leading-none transition-colors hover:text-blue-600 dark:hover:text-blue-600">
+              DKU
+            </span>
+            <span className="animate-pulse font-code transition-colors hover:text-green-500 text-6xl sm:text-7xl md:text-8xl">
+              &gt;
+            </span>
+          </h1>
+          <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 font-mono">
+            <Link
+              href="/sponsor"
+              className={cn(
+                buttonVariants({ size: "lg", variant: "secondary" }),
+                "text-xl rounded-xs font-bold backdrop-blur-sm hover:font-extralight hover:text-amber-600 border border-amber-500 transition-all hover:shadow-xl hover:shadow-amber-300"
+              )}
+            >
+              SPONSOR
+            </Link>
+            <Link
+              href="/register"
+              className={cn(
+                buttonVariants({ size: "lg", variant: "secondary" }),
+                "text-xl rounded-xs font-bold hover:backdrop-blur-sm bg-blue-600 text-white hover:font-extralight hover:text-blue-600 border border-blue-400 transition-all hover:shadow-xl hover:shadow-blue-300"
+              )}
+            >
+              SIGN UP
+            </Link>
+          </div>
+          <br />
         </div>
-        <br />
-      </div>
+      )}
       <PixelCanvas />
     </div>
   );
