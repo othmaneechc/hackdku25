@@ -45,11 +45,11 @@ class Pixel {
     this.color = color;
     this.maxSize = maxSize;
     // Random base alpha in [0.3, 1.0]
-    this.alphaBase = 0.3 + 0.7 * Math.random();
+    this.alphaBase = 0.1 + 0.5 * Math.random();
     // Random parameters for alpha shimmer effect
     this.alphaShimmerSpeed = 0.01 + 0.05 * Math.random();
     this.alphaShimmerOffset = 2 * Math.PI * Math.random();
-    this.alphaShimmerAmplitude = 0.3 * this.alphaBase;
+    this.alphaShimmerAmplitude = 0.1 * this.alphaBase;
     // Initialize current values
     this.size = 0;
     this.alpha = 0;
@@ -82,9 +82,9 @@ export default function PixelCanvas() {
     const ctx: CanvasRenderingContext2D = canvas.getContext("2d")!;
 
     // --- Wave timing/durations ---
-    const appearTime = 150; // frames for pixel to grow from 0 to max size
-    const holdTime = 100; // frames to hold at max size (with flicker)
-    const disappearTime = 150; // frames to shrink from max size to 0
+    const appearTime = 30; // frames for pixel to grow from 0 to max size
+    const holdTime = 30; // frames to hold at max size (with flicker)
+    const disappearTime = 30; // frames to shrink from max size to 0
     const offTime = 100; // frames all remain off before repeating
 
     // Total cycle duration
