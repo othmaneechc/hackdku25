@@ -1,18 +1,19 @@
+import PixelCanvas from "@/components/PixelCanvas"; // Import the PixelCanvas component
 import { Metadata } from "next";
+
+// Example for Next.js 13+ route: /about
 
 export const metadata: Metadata = {
   title: "About",
 };
 
-// Available image items come from your assets; 
-// For missing images, we use "/team/placeholder.png"
-
+// ----- Data Arrays -----
 const organizingCommitteeChairs = [
   {
     name: "Guangzhi (Allen) Su",
     role: "Organizing Committee Chair",
     major: "Computer Science",
-    email: "gs285@duke.edu",
+    email: "guangzhi.su@duke.edu",
     linkedin:
       "https://www.linkedin.com/in/allen-guangzhi-su-%E8%8B%8F%E5%B9%BF%E6%99%BA-613070244/?originalSubdomain=cn",
     picture: "/team/allen.png",
@@ -21,7 +22,7 @@ const organizingCommitteeChairs = [
     name: "Othmane Echchabi",
     role: "Organizing Committee Chair",
     major: "Data Science",
-    email: "oe23@duke.edu",
+    email: "othmane.echchabi@duke.edu",
     linkedin: "https://www.linkedin.com/in/othmaneechchabi/",
     picture: "/team/othmane.png",
   },
@@ -29,7 +30,7 @@ const organizingCommitteeChairs = [
     name: "Anar Nyambayar",
     role: "Organizing Committee Chair",
     major: "AMaCS Computer Science",
-    email: "an301@duke.edu",
+    email: "anar.nyambayar@duke.edu",
     linkedin: "https://www.linkedin.com/in/anar-n/",
     picture: "/team/anar.png",
   },
@@ -40,17 +41,17 @@ const programCommitteeChairs = [
     name: "Shaban Muhammad",
     role: "Program Committee Chair",
     major: "",
-    email: "placeholder@example.com",
+    email: "shaban.muhammad@duke.edu",
     linkedin: "#",
     picture: "/team/placeholder.png",
   },
   {
     name: "Jiahe Chen",
     role: "Program Committee Chair",
-    major: "",
-    email: "placeholder@example.com",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
+    major: "Computation & Design",
+    email: "jiahe.chen@duke.edu",
+    linkedin: "https://www.linkedin.com/in/chenjiahe0331",
+    picture: "/team/jiahe.png",
   },
   {
     name: "Zi Hu",
@@ -74,26 +75,26 @@ const steeringCommitteeChairs = [
   {
     name: "Dr. Luyao Zhang",
     role: "Steering Committee Chair",
-    major: "",
-    email: "placeholder@example.com",
+    major: "Assistant Professor of Economics",
+    email: "luyao.zhang@dukekunshan.edu.cn",
     linkedin: "#",
-    picture: "/team/placeholder.png",
+    picture: "/chairs/luyao.png",
   },
   {
     name: "Dr. Linfeng Huang",
     role: "Steering Committee Chair",
-    major: "",
-    email: "placeholder@example.com",
+    major: "Associate Professor of Biology",
+    email: "linfeng.huang@dukekunshan.edu.cn",
     linkedin: "#",
-    picture: "/team/placeholder.png",
+    picture: "/chairs/linfeng.png",
   },
   {
     name: "Dr. Jiang Long",
     role: "Steering Committee Chair",
-    major: "",
-    email: "placeholder@example.com",
+    major: "Senior Lecturer in Computer Science",
+    email: "jiang.long@dukekunshan.edu.cn",
     linkedin: "#",
-    picture: "/team/placeholder.png",
+    picture: "/chairs/long.png",
   },
 ];
 
@@ -102,7 +103,7 @@ const outreachTeam = [
     name: "Wiam Benadder",
     role: "Outreach Team Member",
     major: "",
-    email: "placeholder@example.com",
+    email: "wiam.benadder@duke.edu",
     linkedin: "#",
     picture: "/team/placeholder.png",
   },
@@ -115,7 +116,7 @@ const outreachTeam = [
     picture: "/team/placeholder.png",
   },
   {
-    name: "Bouchra",
+    name: "Bouchra Daddaoui",
     role: "Outreach Team Member",
     major: "",
     email: "placeholder@example.com",
@@ -136,18 +137,18 @@ const designTeam = [
   {
     name: "Ximing Yu",
     role: "Design Team Member",
-    major: "",
-    email: "placeholder@example.com",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
+    major: "Computation & Design",
+    email: "xy170@duke.edu.cn",
+    linkedin: "https://www.linkedin.com/in/ximing-333109342/",
+    picture: "/team/ximing.png",
   },
   {
     name: "Andi Wan",
     role: "Design Team Member",
-    major: "",
-    email: "placeholder@example.com",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
+    major: "Computation & Design",
+    email: "andi.wan@duke.edu",
+    linkedin: "https://www.linkedin.com/in/andi-wan-3261ba346/",
+    picture: "/team/andi.png",
   },
 ];
 
@@ -214,6 +215,7 @@ const softwareTeam = [
   },
 ];
 
+// ----- Helper to Render Each Grid -----
 interface TeamMember {
   name: string;
   role: string;
@@ -224,32 +226,34 @@ interface TeamMember {
 }
 
 function renderGrid(membersArray: TeamMember[]): JSX.Element | null {
-  // If the array is empty, return null (or you could render a "Coming soon" message)
   if (!membersArray.length) return null;
-  // If the array is not empty, render the grid
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center px-4 container max-w-4xl mt-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center px-4 container max-w-5xl mt-12">
       {membersArray.map((member, index) => (
         <div
           key={index}
-          className="w-full max-w-xs p-4 mx-auto rounded-lg transition-colors duration-300"
+          className="w-full max-w-sm p-4 mx-auto rounded-lg transition-colors duration-300"
         >
           <img
             src={member.picture}
             alt={member.name}
-            className="w-32 h-32 mx-auto rounded-full object-cover"
+            className="w-40 h-40 mx-auto rounded-full object-cover"
           />
           <div className="text-center mt-4">
             <h3 className="text-lg font-semibold transition-colors">
               {member.name}
             </h3>
-            <p className="hover:text-[#7C3AED] text-sm transition-colors">{member.role}</p>
+            <p className="hover:text-[#7C3AED]  italic text-sm transition-colors">
+              {member.role}
+            </p>
             {member.major && (
-              <p className="hover:text-[#D97706] text-sm transition-colors">{member.major}</p>
+              <p className="hover:text-[#D97706]  italic text-sm transition-colors">
+                {member.major}
+              </p>
             )}
             <a
               href={`mailto:${member.email}`}
-              className="text-[#059669] text-sm block mt-2 hover:text-[#059669]"
+              className="text-[#059669] text-sm italic block mt-2 hover:text-[#059669]"
             >
               {member.email}
             </a>
@@ -257,7 +261,7 @@ function renderGrid(membersArray: TeamMember[]): JSX.Element | null {
               href={member.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#3B82F6] text-sm mt-2 hover:text-[#3B82F6]"
+              className="text-[#3B82F6] italic text-sm mt-2 hover:text-[#3B82F6]"
             >
               LinkedIn
             </a>
@@ -268,51 +272,55 @@ function renderGrid(membersArray: TeamMember[]): JSX.Element | null {
   );
 }
 
+// ----- Page Component -----
 export default function AboutPage() {
   return (
-    <div className="container mt-12 relative max-w-6xl py-6 lg:py-10">
+    // Main wrapper for the pixel background effect
+    <main className="relative">
+      {/* Pixel background container behind the content */}
+      <div
+        id="pixel-canvas-container"
+        className="absolute inset-0 pointer-events-none z-0"
+      />
+      <PixelCanvas />
 
-      {/* Organizing Committee Chairs */}
-      <h2 className="text-center text-3xl font-bold mt-12">
-        Organizing Committee Chairs
-      </h2>
-      {renderGrid(organizingCommitteeChairs)}
+      {/* Main content on top (z-10) */}
+      <div className="container mt-12 relative max-w-6xl py-6 lg:py-10 z-10">
+        {/* Organizing Committee Chairs */}
+        <h2 className="text-center text-3xl font-bold mt-12">
+          Organizing Committee Chairs
+        </h2>
+        {renderGrid(organizingCommitteeChairs)}
 
-      {/* Program Committee Chairs */}
-      <h2 className="text-center text-3xl font-bold mt-12">
-        Program Committee Chairs
-      </h2>
-      {renderGrid(programCommitteeChairs)}
+        {/* Program Committee Chairs */}
+        <h2 className="text-center text-3xl font-bold mt-12">
+          Program Committee Chairs
+        </h2>
+        {renderGrid(programCommitteeChairs)}
 
-      {/* Steering Committee Chairs */}
-      <h2 className="text-center text-3xl font-bold mt-12">
-        Steering Committee Chairs
-      </h2>
-      {renderGrid(steeringCommitteeChairs)}
+        {/* Steering Committee Chairs */}
+        <h2 className="text-center text-3xl font-bold mt-12">
+          Steering Committee Chairs
+        </h2>
+        {renderGrid(steeringCommitteeChairs)}
 
-      {/* Members Section */}
-      <h2 className="text-center text-3xl font-bold mt-12">
-      Program Committee Members
-      </h2>
-      <h3 className="text-center text-2xl font-bold mt-8">
-        Outreach Team
-      </h3>
-      {renderGrid(outreachTeam)}
+        {/* Program Committee Members */}
+        <h2 className="text-center text-3xl font-bold mt-12">
+          Program Committee Members
+        </h2>
 
-      <h3 className="text-center text-2xl font-bold mt-8">
-        Design Team
-      </h3>
-      {renderGrid(designTeam)}
+        <h3 className="text-center text-2xl font-bold mt-8">Outreach Team</h3>
+        {renderGrid(outreachTeam)}
 
-      <h3 className="text-center text-2xl font-bold mt-8">
-        Marketing Team
-      </h3>
-      {renderGrid(marketingTeam)}
+        <h3 className="text-center text-2xl font-bold mt-8">Design Team</h3>
+        {renderGrid(designTeam)}
 
-      <h3 className="text-center text-2xl font-bold mt-8">
-        Software Team
-      </h3>
-      {renderGrid(softwareTeam)}
-    </div>
+        <h3 className="text-center text-2xl font-bold mt-8">Marketing Team</h3>
+        {renderGrid(marketingTeam)}
+
+        <h3 className="text-center text-2xl font-bold mt-8">Software Team</h3>
+        {renderGrid(softwareTeam)}
+      </div>
+    </main>
   );
 }

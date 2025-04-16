@@ -11,12 +11,12 @@ import { useState } from "react";
 export default function SiteHeader() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   return (
-    <header className="fixed top-4 left-4 right-4 z-40 flex items-center justify-between bg-blue-500/60 backdrop-blur-md text-white border border-blue-500/40 shadow">
-      <div className="container flex h-12 max-w-screen-2xl items-center justify-between">
+    <header className="fixed top-6 left-6 right-6 z-40 flex items-center justify-between bg-blue-800/80 backdrop-blur-md text-white border border-blue-500/40 shadow">
+      <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex items-center space-x-3 text-background">
             <Image src="/logo-white.png" width="30" height="20" alt="HackDKU logo"/>
-            <span className="text-2xl font-mono font-bold">HΔCKDKU</span>
+            <span className="text-4xl font-mono font-bold">HΔCKDKU</span>
           </Link>
         </div>
         <div className="flex items-center space-x-5 md:space-x-6">
