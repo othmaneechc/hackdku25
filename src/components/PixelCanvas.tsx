@@ -92,7 +92,7 @@ export default function PixelCanvas() {
     // Offset factor: pixels further from center start later
     const offsetFactor = 0.05;
     // Base maximum size for a pixel
-    const baseMaxSize = 2;
+    const baseMaxSize = 0.5;
 
     // Array to store all Pixel objects
     let pixels: Pixel[] = [];

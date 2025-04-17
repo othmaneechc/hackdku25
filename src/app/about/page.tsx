@@ -8,69 +8,6 @@ export const metadata: Metadata = {
 };
 
 // ----- Data Arrays -----
-const organizingCommitteeChairs = [
-  {
-    name: "Guangzhi (Allen) Su",
-    role: "Organizing Committee Chair",
-    major: "Computer Science",
-    email: "guangzhi.su@duke.edu",
-    linkedin:
-      "https://www.linkedin.com/in/allen-guangzhi-su-%E8%8B%8F%E5%B9%BF%E6%99%BA-613070244/?originalSubdomain=cn",
-    picture: "/team/allen.png",
-  },
-  {
-    name: "Othmane Echchabi",
-    role: "Organizing Committee Chair",
-    major: "Data Science",
-    email: "othmane.echchabi@duke.edu",
-    linkedin: "https://www.linkedin.com/in/othmaneechchabi/",
-    picture: "/team/othmane.png",
-  },
-  {
-    name: "Anar Nyambayar",
-    role: "Organizing Committee Chair",
-    major: "AMaCS Computer Science",
-    email: "anar.nyambayar@duke.edu",
-    linkedin: "https://www.linkedin.com/in/anar-n/",
-    picture: "/team/anar.png",
-  },
-];
-
-const programCommitteeChairs = [
-  {
-    name: "Shaban Muhammad",
-    role: "Program Committee Chair",
-    major: "",
-    email: "shaban.muhammad@duke.edu",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
-  },
-  {
-    name: "Jiahe Chen",
-    role: "Program Committee Chair",
-    major: "Computation & Design",
-    email: "jiahe.chen@duke.edu",
-    linkedin: "https://www.linkedin.com/in/chenjiahe0331",
-    picture: "/team/jiahe.png",
-  },
-  {
-    name: "Zi Hu",
-    role: "Program Committee Chair",
-    major: "",
-    email: "placeholder@example.com",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
-  },
-  {
-    name: "Yuanjun Du",
-    role: "Program Committee Chair",
-    major: "",
-    email: "placeholder@example.com",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
-  },
-];
-
 const steeringCommitteeChairs = [
   {
     name: "Dr. Luyao Zhang",
@@ -98,30 +35,93 @@ const steeringCommitteeChairs = [
   },
 ];
 
+const organizingCommitteeChairs = [
+  {
+    name: "Guangzhi (Allen) Su",
+    role: "Organizing Committee Chair",
+    major: "AMaCS Computer Science",
+    email: "guangzhi.su@duke.edu",
+    linkedin:
+      "https://www.linkedin.com/in/allen-guangzhi-su-%E8%8B%8F%E5%B9%BF%E6%99%BA-613070244/?originalSubdomain=cn",
+    picture: "/team/allen.png",
+  },
+  {
+    name: "Othmane Echchabi",
+    role: "Organizing Committee Chair",
+    major: "Data Science",
+    email: "othmane.echchabi@duke.edu",
+    linkedin: "https://www.linkedin.com/in/othmaneechchabi/",
+    picture: "/team/othmane.png",
+  },
+  {
+    name: "Anar Nyambayar",
+    role: "Organizing Committee Chair",
+    major: "AMaCS Computer Science",
+    email: "anar.nyambayar@duke.edu",
+    linkedin: "https://www.linkedin.com/in/anar-n/",
+    picture: "/team/anar.png",
+  },
+];
+
+const programCommitteeChairs = [
+  {
+    name: "Shaban Muhammad",
+    role: "Program Committee Chair",
+    major: "Molecular Bioscience: Genetics & Genomics",
+    email: "shaban.muhammad@duke.edu",
+    linkedin: "https://www.linkedin.com/in/shabanmuhammad/",
+    picture: "/team/shaban.png",
+  },
+  {
+    name: "Jiahe Chen",
+    role: "Program Committee Chair",
+    major: "Computation & Design",
+    email: "jiahe.chen@duke.edu",
+    linkedin: "https://www.linkedin.com/in/chenjiahe0331",
+    picture: "/team/jiahe.png",
+  },
+  // {
+  //   name: "Zi Hu",
+  //   role: "Program Committee Chair",
+  //   major: "",
+  //   email: "placeholder@example.com",
+  //   linkedin: "#",
+  //   picture: "/team/placeholder.png",
+  // },
+  {
+    name: "Yuanjun Du",
+    role: "Program Committee Chair",
+    major: "Economics",
+    email: "yuanjun.du@duke.edu",
+    linkedin: "#",
+    picture: "/team/du.png",
+  },
+];
+
 const outreachTeam = [
   {
     name: "Wiam Benadder",
     role: "Outreach Team Member",
-    major: "",
+    major: "Data Science",
     email: "wiam.benadder@duke.edu",
     linkedin: "#",
-    picture: "/team/placeholder.png",
+    picture: "/team/wiam.png",
   },
-  {
-    name: "Ruisheng Sun",
-    role: "Outreach Team Member",
-    major: "",
-    email: "placeholder@example.com",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
-  },
+  // {
+  //   name: "Ruisheng Sun",
+  //   role: "Outreach Team Member",
+  //   major: "",
+  //   email: "placeholder@example.com",
+  //   linkedin: "#",
+  //   picture: "/team/placeholder.png",
+  // },
   {
     name: "Bouchra Daddaoui",
     role: "Outreach Team Member",
-    major: "",
-    email: "placeholder@example.com",
+    major: "AMaCS Computer Science",
+    email: "bouchra.daddaoui@duke.edu",
     linkedin: "#",
-    picture: "/team/placeholder.png",
+    picture: "/team/bouchra.png",
   },
 ];
 
@@ -163,14 +163,6 @@ const marketingTeam = [
     picture: "/team/allen.png",
   },
   {
-    name: "Yanpei Yu",
-    role: "Marketing Team Member",
-    major: "Data Science",
-    email: "yy475@duke.edu",
-    linkedin: "https://www.linkedin.com/in/yanpei-yu/",
-    picture: "/team/yanpei.png",
-  },
-  {
     name: "Sattor Khamroev",
     role: "Marketing Team Member",
     major: "Data Science",
@@ -179,13 +171,21 @@ const marketingTeam = [
     picture: "/team/sattor.png",
   },
   {
-    name: "Samandar",
+    name: "Yanpei Yu",
     role: "Marketing Team Member",
-    major: "",
-    email: "placeholder@example.com",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
+    major: "Data Science",
+    email: "yy475@duke.edu",
+    linkedin: "https://www.linkedin.com/in/yanpei-yu/",
+    picture: "/team/yanpei.png",
   },
+  // {
+  //   name: "Samandar",
+  //   role: "Marketing Team Member",
+  //   major: "",
+  //   email: "placeholder@example.com",
+  //   linkedin: "#",
+  //   picture: "/team/placeholder.png",
+  // },
 ];
 
 const softwareTeam = [
@@ -206,13 +206,21 @@ const softwareTeam = [
     picture: "/team/anar.png",
   },
   {
-    name: "Enqi Du",
+    name: "Yanpei Yu",
     role: "Software Team Member",
-    major: "",
-    email: "placeholder@example.com",
-    linkedin: "#",
-    picture: "/team/placeholder.png",
+    major: "Data Science",
+    email: "yy475@duke.edu",
+    linkedin: "https://www.linkedin.com/in/yanpei-yu/",
+    picture: "/team/yanpei.png",
   },
+  // {
+  //   name: "Enqi Du",
+  //   role: "Software Team Member",
+  //   major: "",
+  //   email: "placeholder@example.com",
+  //   linkedin: "#",
+  //   picture: "/team/placeholder.png",
+  // },
 ];
 
 // ----- Helper to Render Each Grid -----
@@ -285,7 +293,15 @@ export default function AboutPage() {
       <PixelCanvas />
 
       {/* Main content on top (z-10) */}
+
       <div className="container mt-12 relative max-w-6xl py-6 lg:py-10 z-10">
+
+        {/* Steering Committee Chairs */}
+        <h2 className="text-center text-3xl font-bold mt-12">
+          Steering Committee Chairs
+        </h2>
+        {renderGrid(steeringCommitteeChairs)}
+        
         {/* Organizing Committee Chairs */}
         <h2 className="text-center text-3xl font-bold mt-12">
           Organizing Committee Chairs
@@ -297,12 +313,6 @@ export default function AboutPage() {
           Program Committee Chairs
         </h2>
         {renderGrid(programCommitteeChairs)}
-
-        {/* Steering Committee Chairs */}
-        <h2 className="text-center text-3xl font-bold mt-12">
-          Steering Committee Chairs
-        </h2>
-        {renderGrid(steeringCommitteeChairs)}
 
         {/* Program Committee Members */}
         <h2 className="text-center text-3xl font-bold mt-12">

@@ -1,88 +1,129 @@
 "use client";
 import Splash from "@/components/splash";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
+// List of sponsor logos with both light and dark versions
+const sponsors = [
+  { lightSrc: "/sponsors/igem.png", darkSrc: "/sponsors/igemwhite.png", alt: "iGEM" },
+  { lightSrc: "/sponsors/snapgene.png", darkSrc: "/sponsors/snapgene.png", alt: "SnapGene" },
+  { lightSrc: "/sponsors/csclubblack.png", darkSrc: "/sponsors/csclub.png", alt: "CS Club" },
+  { lightSrc: "/sponsors/finance.png", darkSrc: "/sponsors/finance.png", alt: "Finance Club" },
+  { lightSrc: "/sponsors/aiclub.png", darkSrc: "/sponsors/aiclub.png", alt: "AI Club" },
+  { lightSrc: "/sponsors/prog.png", darkSrc: "/sponsors/prog.png", alt: "Programming Contest Club" },
+  { lightSrc: "/sponsors/dnas.png", darkSrc: "/sponsors/dnas.png", alt: "DNAS" },
+  { lightSrc: "/sponsors/ca.png", darkSrc: "/sponsors/ca.png", alt: "CA" },
+];
 
 export default function Home() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  const isDark = mounted && resolvedTheme === "dark";
+
+  // Triple clone for seamless loop
+  const loopLogos = [...sponsors, ...sponsors, ...sponsors];
+
   return (
     <>
-      <section className="">
-        <div className="mb-20"></div>
+      <section>
+        <div className="mb-20" />
         <Splash />
+
         {/* Introductory Text */}
         <div className="container mt-0 p-10 flex max-w-5xl flex-col items-center gap-4 text-center xl:mt-0">
-          <h2 className="text-center text-4xl font-bold mt-6 mb-6">
-            Welcome to HackDKU!
-          </h2>
-          <p className="max-w-5xl font-sans text-left leading-normal text-muted-foreground text-sm sm:text-base sm:leading-7">
-            Duke Kunshan University’s{" "}
-            <span className="font-bold">Computer Science</span>, AI, iGEM,
-            Programming Contest, and Finance Clubs are thrilled to introduce{" "}
-            <span className="italic">HackDKU</span>, an event that’s not just
-            another hackathon but a transformative experience designed to
-            redefine the hackathon ethos. At HackDKU, we’re not just developing
-            technology; we’re cultivating innovations that matter, fostering
-            inclusive collaboration, and inspiring lasting change.
+          <h2 className="text-4xl font-bold mt-6 mb-6">Welcome to HackDKU!</h2>
+          <p className="max-w-5xl text-sm sm:text-base leading-7 text-muted-foreground">
+            Duke Kunshan University’s <strong>Computer Science</strong>, AI, iGEM,
+            Programming Contest, and Finance Clubs are thrilled to introduce <em>HackDKU</em>,
+            an event that redefines the hackathon ethos—cultivating innovations,
+            inclusive collaboration, and lasting change.
           </p>
-          <p className="max-w-5xl font-sans text-left leading-normal text-muted-foreground text-sm sm:text-base sm:leading-7">
-            This event goes beyond the traditional hackathon format. It’s an arena for
-            stimulating speaker sessions, hands-on workshops, and project development across three key tracks:{" "}
-            <span className="text-amber-600 font-mono">Finance</span>,{" "}
-            <span className="text-violet-600 font-mono">Healthcare / Biotech</span>, and{" "}
-            <span className="text-green-600 font-mono">Environment / Sustainability</span>.
-            We invite innovators of all hues – whether tech enthusiasts or non-tech thinkers,
-            students fresh on their academic journey or seasoned experts.
+          <p className="max-w-5xl text-sm sm:text-base leading-7 text-muted-foreground">
+            Beyond coding sprints, enjoy speaker sessions, hands-on workshops, and project tracks in{' '}
+            <code className="text-amber-600">Finance</code>,{' '}
+            <code className="text-violet-600">Healthcare/Biotech</code>,{' '}
+            and <code className="text-green-600">Environment/Sustainability</code>. All backgrounds welcome!
           </p>
         </div>
 
         {/* Hackathon Tracks Section */}
-        <div className="container mt-20 flex max-w-5xl flex-col items-center gap-6 text-center xl:mt-0">
-          <h2 className="text-center text-4xl font-bold mt-6 mb-6">
-            Hackathon Tracks
-          </h2>
+        <div id="sponsors-carousel" className="container mt-20 max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Hackathon Tracks</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 border-4 border-solid border-amber-500 rounded-lg">
+            <div className="p-6 border-4 border-amber-500 rounded-lg">
               <h3 className="text-xl font-bold">Finance</h3>
-              <p className="mt-2 text-sm">
-                Innovative financial technologies and new approaches to finance.
-              </p>
+              <p className="mt-2 text-sm">Innovative financial technologies & new approaches.</p>
             </div>
-            <div className="p-6 border-4 border-solid border-violet-500 rounded-lg">
+            <div className="p-6 border-4 border-violet-500 rounded-lg">
               <h3 className="text-xl font-bold">Healthcare / Biotech</h3>
-              <p className="mt-2 text-sm">
-                Advances in healthcare, biotechnology, and life sciences.
-              </p>
+              <p className="mt-2 text-sm">Advances in healthcare, biotech & life sciences.</p>
             </div>
-            <div className="p-6 border-4 border-solid border-green-500 rounded-lg">
+            <div className="p-6 border-4 border-green-500 rounded-lg">
               <h3 className="text-xl font-bold">Environment / Sustainability</h3>
-              <p className="mt-2 text-sm">
-                Solutions for environmental protection and sustainable practices.
-              </p>
+              <p className="mt-2 text-sm">Solutions for environmental protection.</p>
             </div>
           </div>
         </div>
 
-        {/* Speakers Section */}
-        <div className="container mt-20 mb-10 flex max-w-5xl flex-col items-center gap-6 text-center xl:mt-0">
-          <h2 className="text-center text-4xl font-bold mt-20 mb-6">Keynote Speakers</h2>
-          {/* Keynote Speaker Card */}
+        {/* Sponsors Infinite Marquee Section */}
+        <div className="container mt-20 mb-10 max-w-5xl mx-auto text-center overflow-hidden">
+          <h2 className="text-4xl font-bold mb-6">Our Sponsors</h2>
+          <div className="marquee">
+            <div className="marquee__inner">
+              {loopLogos.map((s, idx) => (
+                <img
+                  key={idx}
+                  src={isDark ? s.darkSrc : s.lightSrc}
+                  alt={s.alt}
+                  className="h-20 object-contain mx-6"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Keynote Speakers Section */}
+        <div className="container mt-20 mb-10 max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Keynote Speakers</h2>
           <div className="flex flex-col md:flex-row items-center gap-6 border-4 rounded-lg p-6">
-            {/* Speaker Photo */}
-            <div className="w-32 h-32 md:w-48 md:h-48 flex-shrink-0">
+            <div className="w-48 h-48 flex-shrink-0">
               <img
                 src="/speakers/drchristine.png"
                 alt="Dr. Christine Yuan HUANG"
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-            {/* Speaker Information and Description */}
             <div className="text-left">
-            <h3 className="text-2xl font-bold">Dr. Christine Yuan HUANG</h3>
-            <p className="mt-2 text-sm">
-              Dr. Christine Yuan HUANG is the Founder &amp; CEO of Quantum Life, Technology Transfer Director at Hong Kong Quantum AI Lab, Managing Director of HK Longevity Medical Centre, and Venture Partner at LongeVC. She is also a Fellow of both the Royal Society of Medicine (UK) and the European Society of Preventive Medicine, serving as Vice President (Longevity) of the Hong Kong Biotechnology Association and the Founding President of Asia Longevity Professionals Association (ALPA). Her remarkable achievements have earned her recognition as one of Forbes China’s “30 Under 30” for Healthcare &amp; Science, Deloitte Outstanding Female Entrepreneur, and a member of Goldman Sachs 10000 Women.
-            </p>
-            <p className="mt-4 text-sm">
-              Dr. Huang leads the development of the first AI‑enabled precision healthy longevity system—a breakthrough that garnered the Gold Medal at the 50th Geneva International Invention Exhibition in 2025. She also lends her expertise as an Advisory Board member for Wing Wah Charity Foundation Hong Kong and as a Forbes China columnist, holding an MD from Southern Medical University and an MPH from the University of Hong Kong’s Li Ka Shing Faculty of Medicine.
-            </p>
+              <h3 className="text-2xl font-bold">Dr. Christine Yuan Huang</h3>
+              <p className="mt-2 text-sm">
+                Dr. Christine Yuan HUANG is Founder & CEO of Quantum Life and Technology Transfer Director at the Hong Kong Quantum AI Lab. An MD (Southern Medical University) and MPH (HKU Li Ka Shing Faculty of Medicine), she led development of an AI‑driven healthy‑aging platform that won Gold at the 2025 Geneva International Invention Exhibition. She serves as Vice President (Longevity) of the Hong Kong Biotechnology Association and Founding President of the Asia Longevity Professionals Association, and advises the Wing Wah Charity Foundation.               </p>
+              <p className="mt-4 text-sm">
+              A Forbes China “30 Under 30” honoree and Fellow of both the Royal Society of Medicine (UK) and European Society of Preventive Medicine, she contributes as a Forbes columnist and speaks globally on AI in medicine.</p>
+            </div>
           </div>
+        </div>
+
+        {/* Speakers Section */}
+        <div className="container mt-20 mb-10 max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Speakers</h2>
+          <div className="flex flex-col md:flex-row items-center gap-6 border-4 rounded-lg p-6">
+            <div className="w-48 h-48 flex-shrink-0">
+              <img
+                src="/speakers/yoon.png"
+                alt="Dr. Joong-Tak Yoon"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <div className="text-left">
+              <h3 className="text-2xl font-bold">Dr. Joong-Tak Yoon</h3>
+              <p className="mt-2 text-sm">
+              Dr. Joong‑Tak Yoon is a postdoctoral research fellow in biology at Duke Kunshan University. He earned both his B.S. and Ph.D. in Systems Biology from Yonsei University—publishing in journals like Journal of Experimental Botany and Planta—and won the Brain Korea 21 Grand Prize. </p>
+              <p className="mt-4 text-sm">
+               With extensive experience as a lab instructor and presenter at international conferences, he specializes in plant molecular biology, protein function and genetic engineering. Dr. Yoon will lead HackDKU ’25’s hands‑on plasmid‑design workshop using SnapGene, sharing practical insights from his award‑winning research and teaching. 
+              </p>
+            </div>
           </div>
         </div>
       </section>

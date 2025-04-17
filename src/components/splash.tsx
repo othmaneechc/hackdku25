@@ -191,16 +191,16 @@ export default function Splash({ backgroundOnly = false }: SplashProps) {
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 font-mono">
             <Link
-              href="/sponsor"
+              href="#sponsors-carousel"
               className={cn(
                 buttonVariants({ size: "lg", variant: "secondary" }),
                 "text-xl rounded-xs font-bold backdrop-blur-sm hover:font-extralight hover:text-amber-600 border border-amber-500 transition-all hover:shadow-xl hover:shadow-amber-300"
               )}
             >
-              SPONSOR
+              SPONSORS
             </Link>
             <Link
-              href="/register"
+              href="https://duke.qualtrics.com/jfe/form/SV_0IAf8DEnmOLA3Zk"
               className={cn(
                 buttonVariants({ size: "lg", variant: "secondary" }),
                 "text-xl rounded-xs font-bold hover:backdrop-blur-sm bg-blue-600 text-white hover:font-extralight hover:text-blue-600 border border-blue-400 transition-all hover:shadow-xl hover:shadow-blue-300"

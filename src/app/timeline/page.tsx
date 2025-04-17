@@ -1,5 +1,4 @@
 import PageHeader from "@/components/page-header";
-import PixelCanvas from "@/components/PixelCanvas"; // Import the PixelCanvas component
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,11 +10,6 @@ export default function TimelinePage() {
     <div className="container mt-20 relative max-w-6xl py-6 lg:py-10">
       <PageHeader title="Hackathon Schedule"/>
       {/* <hr className="my-8" /> */}
-      <div
-        id="pixel-canvas-container"
-        className="absolute inset-0 pointer-events-none z-0"
-      />
-      <PixelCanvas />
       <div className="mt-8 space-y-15">
         {/* March 23rd Schedule */}
         <section>
