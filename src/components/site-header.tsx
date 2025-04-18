@@ -16,7 +16,7 @@ export default function SiteHeader() {
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex items-center space-x-3 text-background">
             <Image src="/logo-white.png" width="30" height="20" alt="HackDKU logo"/>
-            <span className="text-3xl font-code font-bold">HΔCKDKU</span>
+            <span className="text-xl md:text-xl lg:text-3xl font-code font-bold">HΔCKDKU</span>
           </Link>
         </div>
         <div className="flex items-center space-x-5 md:space-x-6">

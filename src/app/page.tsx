@@ -67,19 +67,21 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Sponsors Infinite Marquee Section */}
-        <div className="container mt-20 mb-10 max-w-5xl mx-auto text-center overflow-hidden">
-          <h2 className="text-4xl font-bold mb-6">Our Sponsors</h2>
-          <div className="marquee">
-            <div className="marquee__inner">
-              {loopLogos.map((s, idx) => (
-                <img
-                  key={idx}
-                  src={isDark ? s.darkSrc : s.lightSrc}
-                  alt={s.alt}
-                  className="h-20 object-contain mx-6"
-                />
-              ))}
+        {/* Sponsors Infinite Marquee Section - Full Width */}
+        <div className="w-full mt-20 mb-10 text-center">
+          <h2 className="text-4xl font-bold mb-10 container mx-auto">Our Sponsors</h2>
+          <div className="marquee-container">
+            <div className="marquee">
+              <div className="marquee__inner">
+                {loopLogos.map((s, idx) => (
+                  <img
+                    key={idx}
+                    src={isDark ? s.darkSrc : s.lightSrc}
+                    alt={s.alt}
+                    className="h-20 object-contain mx-6"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

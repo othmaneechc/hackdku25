@@ -91,18 +91,35 @@
   }
 }
 
+.marquee-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: hidden;
+}
+
 .marquee {
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
+
 .marquee__inner {
   display: flex;
-  width: calc(300%);
-  animation: marquee 15s linear infinite;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+  padding: 1rem 0;
 }
+
 @keyframes marquee {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-33.3333%); }
+  100% { transform: translateX(-33.333%); }
+}
+
+/* Pause animation on hover for better UX */
+.marquee:hover .marquee__inner {
+  animation-play-state: paused;
 }
 
 html {
