@@ -8,39 +8,19 @@ export const metadata: Metadata = {
 export default function TimelinePage() {
   return (
     <div className="container mt-20 relative max-w-6xl py-6 lg:py-10">
-      <PageHeader title="Hackathon Schedule"/>
+      <h2 className="text-4xl font-bold mb-6 font-mono">Hackathon Schedule</h2>
       {/* <hr className="my-8" /> */}
       <div className="mt-8 space-y-15">
         {/* March 23rd Schedule */}
         <section>
-          <h2 className="text-2xl font-bold mb-4">April 26th</h2>
-          <table className="min-w-full border-collapse">
+          <h2 className="text-2xl font-bold mb-4 font-mono">April 26th</h2>
+          <table className="min-w-full border-collapse text-sm">
             <thead>
               <tr>
-                <th
-                  className="px-4 py-2 border"
-                  style={{ backgroundColor: "#3B82F6", fontWeight: "bold" }}
-                >
-                  Time
-                </th>
-                <th
-                  className="px-4 py-2 border"
-                  style={{ backgroundColor: "#3B82F6", fontWeight: "bold" }}
-                >
-                  Event
-                </th>
-                <th
-                  className="px-4 py-2 border"
-                  style={{ backgroundColor: "#3B82F6", fontWeight: "bold" }}
-                >
-                  Location
-                </th>
-                <th
-                  className="px-4 py-2 border"
-                  style={{ backgroundColor: "#3B82F6", fontWeight: "bold" }}
-                >
-                  Description
-                </th>
+                <th className="px-4 py-2 border bg-blue-500/70 font-bold">Time</th>
+                <th className="px-4 py-2 border bg-blue-500/70 font-bold">Event</th>
+                <th className="px-4 py-2 border bg-blue-500/70 font-bold">Location</th>
+                <th className="px-4 py-2 border bg-blue-500/70 font-bold">Description</th>
               </tr>
             </thead>
             <tbody>
@@ -124,34 +104,14 @@ export default function TimelinePage() {
 
         {/* March 24th Schedule */}
         <section>
-          <h2 className="text-2xl font-bold mb-4 mt-10">April 27th</h2>
-          <table className="min-w-full border-collapse">
+          <h2 className="text-2xl font-bold mb-4 mt-10 font-mono">April 27th</h2>
+          <table className="min-w-full border-collapse text-sm">
             <thead>
               <tr>
-                <th
-                  className="px-4 py-2 border"
-                  style={{ backgroundColor: "#3B82F6", fontWeight: "bold" }}
-                >
-                  Time
-                </th>
-                <th
-                  className="px-4 py-2 border"
-                  style={{ backgroundColor: "#3B82F6", fontWeight: "bold" }}
-                >
-                  Event
-                </th>
-                <th
-                  className="px-4 py-2 border"
-                  style={{ backgroundColor: "#3B82F6", fontWeight: "bold" }}
-                >
-                  Location
-                </th>
-                <th
-                  className="px-4 py-2 border"
-                  style={{ backgroundColor: "#3B82F6", fontWeight: "bold" }}
-                >
-                  Description
-                </th>
+                <th className="px-4 py-2 border bg-blue-500/70 font-bold">Time</th>
+                <th className="px-4 py-2 border bg-blue-500/70 font-bold">Event</th>
+                <th className="px-4 py-2 border bg-blue-500/70 font-bold">Location</th>
+                <th className="px-4 py-2 border bg-blue-500/70 font-bold">Description</th>
               </tr>
             </thead>
             <tbody>

@@ -16,7 +16,7 @@ export default function HeaderNav() {
           key={item.label + item.path}
           href={item.path}
           className={cn(
-            " font-normal hover:text-primary transition-colors flex items-center",
+            " font-normal hover:text-primary font-mono transition-colors flex items-center",
             `/${segment}` === item.path
               ? "text-primary"
               : "text-muted-foreground"

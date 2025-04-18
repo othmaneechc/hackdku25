@@ -25,6 +25,9 @@ const config = {
         lexend: ["var(--font-lexend)", ...fontFamily.sans],
         code: ["var(--font-code)", ...fontFamily.sans],
         besley: ["var(--font-besley)", ...fontFamily.serif],
+        oswald: ["var(--font-oswald)", ...fontFamily.sans],
+        specialgothic: ["Special Gothic Expanded One", ...fontFamily.serif],
+        mono: ["var(--font-jetbrains)", ...fontFamily.mono],
       },
       colors: {
         border: "hsl(var(--border))",

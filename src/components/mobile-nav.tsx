@@ -17,7 +17,7 @@ export default function MobileNav({ onOpenChange }: MobileNavProps) {
           <MobileLink
             key={item.label + item.path}
             href={item.path}
-            className="flex items-center text-black dark:text-white"
+            className="flex items-center font-mono text-black dark:text-white"
             onOpenChange={onOpenChange}
           >
             <item.icon className="mr-2 size-4" />

@@ -170,8 +170,8 @@ export default function Splash({ backgroundOnly = false }: SplashProps) {
       {!backgroundOnly && (
         <div className="container flex max-w-4xl flex-col items-center gap-8 rounded-3xl text-center xl:mt-0 relative z-10">
           <br />
-          <h1 className="text-6xl font-mono text-blue-800 dark:text-white font-bold sm:text-7xl md:text-8xl leading-none">
-            <span className="transition-all hover:text-violet-600 dark:hover:text-violet-500">
+          <h1 className="text-6xl font-mono text-blue-600 dark:text-white font-bold sm:text-7xl md:text-8xl leading-none">
+            <span className="font-code transition-all hover:text-violet-600 dark:hover:text-violet-500">
               HΔCK
             </span>
             <br />
@@ -182,7 +182,7 @@ export default function Splash({ backgroundOnly = false }: SplashProps) {
             <span className="animate-pulse font-code transition-colors hover:text-green-500 text-6xl sm:text-7xl md:text-8xl">
               &lt;
             </span>
-            <span className="font-code text-primary text-6xl sm:text-7xl md:text-8xl leading-none transition-colors hover:text-blue-600 dark:hover:text-blue-600">
+            <span className="font-code text-primary leading-none transition-colors hover:text-blue-500 dark:hover:text-blue-600">
               DKU
             </span>
             <span className="animate-pulse font-code transition-colors hover:text-green-500 text-6xl sm:text-7xl md:text-8xl">

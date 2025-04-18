@@ -166,7 +166,7 @@ export default function Instructions() {
   // Shared button styling to be used for both buttons
   const sharedButtonClasses = cn(
     buttonVariants({ size: "lg", variant: "secondary" }),
-    "text-xl rounded-xs font-bold backdrop-blur-sm hover:font-extralight border border-amber-500 transition-all hover:shadow-xl hover:shadow-amber-300"
+    "text-xl rounded-xs font-bold backdrop-blur-sm hover:font-extralight border border-amber-500 transition-all hover:shadow-xl hover:shadow-amber-300 font-mono"
   );
 
   return (
@@ -220,9 +220,9 @@ export default function Instructions() {
             Mentorship Hours
           </Link>
         </div>
-        <h3 className="text-2xl font-semibold mt-8 text-center mb-4">
+        <h2 className="text-2xl font-semibold mt-8 text-center mb-4">
           Judging Criteria
-        </h3>
+        </h2>
         <div className="mt-2 space-y-4">
           <p>
             <strong>Feasibility and Impact:</strong> How well does the hack fit the track theme? How well thought-out is the concept itself concerning both the problem it aims to solve and the proposed solution?
@@ -237,9 +237,9 @@ export default function Instructions() {
             <strong>Overall Presentation:</strong> How convincing is the pitch? Was it well prepared, and did the hackers effectively articulate the scope and impact of their problem?
           </p>
         </div>
-        <h3 className="text-2xl font-semibold mt-8 text-center mb-4">
+        <h2 className="text-2xl font-semibold mt-8 text-center mb-4">
           Submission
-        </h3>
+        </h2>
         <p>
           Team Projects must be submitted via the HackDKU DevPost platform (link below).
           Submissions should be a working code, application, website, or a UI/UX prototype.
