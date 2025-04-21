@@ -1,4 +1,3 @@
-import PageHeader from "@/components/page-header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
 export default function TimelinePage() {
   return (
     <div className="container mt-20 relative max-w-6xl py-6 lg:py-10">
-      <h2 className="text-4xl font-bold mb-6 font-mono">Hackathon Schedule</h2>
+      <h2 className="text-4xl font-bold mb-6 font-mono">HackDKU Schedule</h2>
       {/* <hr className="my-8" /> */}
       <div className="mt-8 space-y-15">
         {/* March 23rd Schedule */}
