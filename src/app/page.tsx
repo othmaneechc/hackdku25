@@ -6,13 +6,13 @@ import { useEffect, useState } from "react";
 // List of sponsor logos with both light and dark versions
 const sponsors = [
   { lightSrc: "/sponsors/igem.png", darkSrc: "/sponsors/igemwhite.png", alt: "iGEM" },
-  { lightSrc: "/sponsors/snapgene.png", darkSrc: "/sponsors/snapgene.png", alt: "SnapGene" },
-  { lightSrc: "/sponsors/csclubblack.png", darkSrc: "/sponsors/csclub.png", alt: "CS Club" },
-  { lightSrc: "/sponsors/finance.png", darkSrc: "/sponsors/finance.png", alt: "Finance Club" },
-  { lightSrc: "/sponsors/aiclub.png", darkSrc: "/sponsors/aiclub.png", alt: "AI Club" },
-  { lightSrc: "/sponsors/prog.png", darkSrc: "/sponsors/prog.png", alt: "Programming Contest Club" },
-  { lightSrc: "/sponsors/dnas.png", darkSrc: "/sponsors/dnas.png", alt: "DNAS" },
-  { lightSrc: "/sponsors/ca.png", darkSrc: "/sponsors/ca.png", alt: "CA" },
+  { lightSrc: "/sponsors/snapgene.png", darkSrc: "/sponsors/snapgenewhite.png", alt: "SnapGene" },
+  { lightSrc: "/sponsors/csclub.png", darkSrc: "/sponsors/csclubwhite.png", alt: "CS Club" },
+  { lightSrc: "/sponsors/finance.png", darkSrc: "/sponsors/financewhite.png", alt: "Finance Club" },
+  { lightSrc: "/sponsors/aiclub.png", darkSrc: "/sponsors/aiclubwhite.png", alt: "AI Club" },
+  { lightSrc: "/sponsors/prog.png", darkSrc: "/sponsors/progwhite.png", alt: "Programming Contest Club" },
+  { lightSrc: "/sponsors/dnas.png", darkSrc: "/sponsors/dnaswhite.png", alt: "DNAS" },
+  { lightSrc: "/sponsors/ca.png", darkSrc: "/sponsors/cawhite.png", alt: "CA" },
 ];
 
 export default function Home() {
