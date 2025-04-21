@@ -13,6 +13,8 @@ const sponsors = [
   { lightSrc: "/sponsors/prog.png", darkSrc: "/sponsors/progwhite.png", alt: "Programming Contest Club" },
   { lightSrc: "/sponsors/dnas.png", darkSrc: "/sponsors/dnaswhite.png", alt: "DNAS" },
   { lightSrc: "/sponsors/ca.png", darkSrc: "/sponsors/cawhite.png", alt: "CA" },
+  { lightSrc: "/sponsors/aws.png", darkSrc: "/sponsors/awswhite.png", alt: "CA" },
+
 ];
 
 export default function Home() {
