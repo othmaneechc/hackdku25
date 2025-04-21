@@ -248,7 +248,7 @@ export default function Instructions() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 mt-4 mb-10">
         <Link
-            href="https://devpost.com"
+            href="https://hackdku2025.devpost.com/"
             target="_blank"
             rel="noopener noreferrer"
             className={sharedButtonClasses}
