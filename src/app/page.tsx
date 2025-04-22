@@ -3,7 +3,82 @@ import Splash from "@/components/splash";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-// -------------------- Data --------------------
+/************************
+ *  Countdown Component *
+ ************************/
+interface TimeLeft {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+/**
+ * Simple ticking countdown.  Updates every second.
+ * Change `target` to your desired hackathon start time
+ * (YYYY‑MM‑DDThh:mm:ss in local time).
+ */
+function Countdown({ target }: { target: string }) {
+  const calculateTimeLeft = (): TimeLeft => {
+    const now = new Date();
+    const distance = new Date(target).getTime() - now.getTime();
+
+    if (distance <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    return { days, hours, minutes, seconds };
+  };
+
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000);
+    return () => clearInterval(timer);
+    // eslint‑disable‑next‑line react‑hooks/exhaustive‑deps
+  }, [target]);
+
+  // Once the countdown finishes
+  if (Object.values(timeLeft).every((v) => v === 0)) {
+    return (
+      <div className="text-center">
+        <h2 className="text-4xl font-bold mb-4">HackDKU is live! 🚀</h2>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex countdown flex-wrap items-center justify-center gap-6">
+      {([
+        { label: "Days", value: timeLeft.days },
+        { label: "Hours", value: timeLeft.hours },
+        { label: "Minutes", value: timeLeft.minutes },
+        { label: "Seconds", value: timeLeft.seconds },
+      ] as const).map(({ label, value }) => (
+        <div
+          key={label}
+          className="w-24 sm:w-28 md:w-32 rounded-2xl shadow-lg p-4 bg-white/80 dark:bg-white/10 backdrop-blur"
+        >
+          <p className="text-3xl md:text-4xl font-bold leading-none">
+            {value.toString().padStart(2, "0")}
+          </p>
+          <p className="mt-1 text-xs uppercase tracking-wide text-muted-foreground">
+            {label}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/***********************
+ *  Data & Interfaces  *
+ **********************/
 // List of sponsor logos with both light and dark versions
 const sponsors = [
   { lightSrc: "/sponsors/igem.png", darkSrc: "/sponsors/igemwhite.png", alt: "iGEM" },
@@ -59,16 +134,17 @@ const judges: Judge[] = [
 interface Speaker {
   name: string;
   title: string; // short role / position
-  bio: string;   // longer description (can include "\n\n" for paragraph breaks)
+  bio: string; // longer description (can include "\n\n" for paragraph breaks)
   picture: string;
 }
 
-const keynoteSpeakers: Speaker[] = [{
-  name: "Dr. Christine Yuan Huang",
-  title: "Founder & CEO • Quantum Life",
-  bio: `Dr. Christine Yuan HUANG is Founder & CEO of Quantum Life and Technology Transfer Director at the Hong Kong Quantum AI Lab. An MD (Southern Medical University) and MPH (HKU Li Ka Shing Faculty of Medicine), she led development of an AI‑driven healthy‑aging platform that won Gold at the 2025 Geneva International Invention Exhibition. She serves as Vice President (Longevity) of the Hong Kong Biotechnology Association and Founding President of the Asia Longevity Professionals Association, and advises the Wing Wah Charity Foundation. A Forbes China “30 Under 30” honoree and Fellow of both the Royal Society of Medicine (UK) and European Society of Preventive Medicine, she contributes as a Forbes columnist and speaks globally on AI in medicine.`,
-  picture: "/speakers/drchristine.png",
-},
+const keynoteSpeakers: Speaker[] = [
+  {
+    name: "Dr. Christine Yuan Huang",
+    title: "Founder & CEO • Quantum Life",
+    bio: `Dr. Christine Yuan HUANG is Founder & CEO of Quantum Life and Technology Transfer Director at the Hong Kong Quantum AI Lab. An MD (Southern Medical University) and MPH (HKU Li Ka Shing Faculty of Medicine), she led development of an AI‑driven healthy‑aging platform that won Gold at the 2025 Geneva International Invention Exhibition. She serves as Vice President (Longevity) of the Hong Kong Biotechnology Association and Founding President of the Asia Longevity Professionals Association, and advises the Wing Wah Charity Foundation. A Forbes China “30 Under 30” honoree and Fellow of both the Royal Society of Medicine (UK) and European Society of Preventive Medicine, she contributes as a Forbes columnist and speaks globally on AI in medicine.`,
+    picture: "/speakers/drchristine.png",
+  },
 ];
 
 const speakers: Speaker[] = [
@@ -78,23 +154,30 @@ const speakers: Speaker[] = [
     bio: `Dr. Joong‑Tak Yoon is a postdoctoral research fellow in biology at Duke Kunshan University. He earned both his B.S. and Ph.D. in Systems Biology from Yonsei University—publishing in journals like Journal of Experimental Botany and Planta—and won the Brain Korea 21 Grand Prize. With extensive experience as a lab instructor and presenter at international conferences, he specializes in plant molecular biology, protein function and genetic engineering. Dr. Yoon will lead HackDKU ’25’s hands‑on plasmid‑design workshop using SnapGene, sharing practical insights from his award‑winning research and teaching.`,
     picture: "/speakers/yoon.png",
   },
-  // ←–– Add more speakers here by appending to this array.
 ];
 
-// -------------------- Helper Components --------------------
+/************************
+ *  Helper Components   *
+ ************************/
 function SpeakerCard({ speaker }: { speaker: Speaker }) {
-  // Split bio into paragraphs on double line breaks for nicer formatting
   const paragraphs = speaker.bio.split(/\n\n+/);
   return (
     <div className="flex flex-col md:flex-row items-center gap-6 border-4 rounded-lg p-6 mb-8">
       <div className="w-48 h-48 flex-shrink-0">
-        <img src={speaker.picture} alt={speaker.name} className="w-full h-full object-cover rounded-full" />
+        <img
+          src={speaker.picture}
+          alt={speaker.name}
+          className="w-full h-full object-cover rounded-full"
+        />
       </div>
       <div className="text-left">
         <h3 className="text-2xl font-bold">{speaker.name}</h3>
         <p className="mt-1 italic text-[#D97706] text-sm">{speaker.title}</p>
         {paragraphs.map((p, i) => (
-          <p key={i} className={`text-sm mt-${i === 0 ? '2' : '4'} leading-5 text-muted-foreground`}>
+          <p
+            key={i}
+            className={`text-sm mt-${i === 0 ? "2" : "4"} leading-5 text-muted-foreground`}
+          >
             {p}
           </p>
         ))}
@@ -108,19 +191,40 @@ function renderJudgeGrid(members: Judge[]) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center px-4 container max-w-5xl mt-12">
       {members.map((m, idx) => (
-        <div key={idx} className="w-full max-w-sm p-4 mx-auto rounded-lg transition-colors duration-300">
-          <img src={m.picture} alt={m.name} className="w-40 h-40 mx-auto rounded-full object-cover" />
+        <div
+          key={idx}
+          className="w-full max-w-sm p-4 mx-auto rounded-lg transition-colors duration-300"
+        >
+          <img
+            src={m.picture}
+            alt={m.name}
+            className="w-40 h-40 mx-auto rounded-full object-cover"
+          />
           <div className="text-center mt-4">
             <h3 className="text-lg font-semibold">{m.name}</h3>
-            {m.role && <p className="hover:text-[#7C3AED] italic text-sm">{m.role}</p>}
-            {m.major && <p className="hover:text-[#D97706] text-[#059669] italic text-sm">{m.major}</p>}
+            {m.role && (
+              <p className="hover:text-[#7C3AED] italic text-sm">{m.role}</p>
+            )}
+            {m.major && (
+              <p className="hover:text-[#D97706] text-[#059669] italic text-sm">
+                {m.major}
+              </p>
+            )}
             {m.email && (
-              <a href={`mailto:${m.email}`} className="text-[#059669] text-sm italic block mt-2 hover:text-[#059669]">
+              <a
+                href={`mailto:${m.email}`}
+                className="text-[#059669] text-sm italic block mt-2 hover:text-[#059669]"
+              >
                 {m.email}
               </a>
             )}
             {m.linkedin && (
-              <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] italic text-sm mt-2 hover:text-[#3B82F6]">
+              <a
+                href={m.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#3B82F6] italic text-sm mt-2 hover:text-[#3B82F6]"
+              >
                 LinkedIn
               </a>
             )}
@@ -131,7 +235,9 @@ function renderJudgeGrid(members: Judge[]) {
   );
 }
 
-// -------------------- Page Component --------------------
+/***********************
+ *   Page Component    *
+ **********************/
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -143,6 +249,7 @@ export default function Home() {
 
   return (
     <section>
+      {/* Spacer before hero */}
       <div className="mb-20" />
       <Splash />
 
@@ -155,10 +262,17 @@ export default function Home() {
         </p>
         <p className="max-w-5xl text-sm sm:text-base leading-7 text-muted-foreground">
           Beyond coding sprints, enjoy speaker sessions, workshops, and tracks in{' '}
-          <code className="text-amber-600">Finance</code>,{' '}
-          <code className="text-violet-600">Healthcare/Biotech</code>, and{' '}
-          <code className="text-green-600">Environment/Sustainability</code>. All backgrounds welcome!
+          <code className="text-amber-500">Finance</code>,{' '}
+          <code className="text-violet-500">Healthcare/Biotech</code>, and{' '}
+          <code className="text-green-500">Environment/Sustainability</code>. All backgrounds welcome!
         </p>
+      </div>
+
+      {/* Countdown to hackathon */}
+      <div className="container max-w-5xl mx-auto mb-4 text-center">
+        <h2 className="text-3xl font-bold mb-4">Hackathon Starts In</h2>
+        {/* Adjust start time here */}
+        <Countdown target="2025-04-26T09:00:00" />
       </div>
 
       {/* Tracks */}
@@ -166,11 +280,26 @@ export default function Home() {
         <h2 className="text-4xl font-bold mb-6">Hackathon Tracks</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { title: 'Finance', color: 'amber', blurb: 'Innovative financial technologies & new approaches.' },
-            { title: 'Healthcare / Biotech', color: 'violet', blurb: 'Advances in healthcare, biotech & life sciences.' },
-            { title: 'Environment / Sustainability', color: 'green', blurb: 'Solutions for environmental protection.' },
+            {
+              title: 'Finance',
+              color: 'amber',
+              blurb: 'Innovative financial technologies & new approaches.',
+            },
+            {
+              title: 'Healthcare / Biotech',
+              color: 'violet',
+              blurb: 'Advances in healthcare, biotech & life sciences.',
+            },
+            {
+              title: 'Environment / Sustainability',
+              color: 'green',
+              blurb: 'Solutions for environmental protection.',
+            },
           ].map((t) => (
-            <div key={t.title} className={`p-6 border-4 border-${t.color}-500 rounded-lg`}>
+            <div
+              key={t.title}
+              className={`p-6 border-4 border-${t.color}-500 rounded-lg`}
+            >
               <h3 className="text-xl font-bold">{t.title}</h3>
               <p className="mt-2 text-sm">{t.blurb}</p>
             </div>
@@ -185,7 +314,12 @@ export default function Home() {
           <div className="marquee">
             <div className="marquee__inner">
               {loopLogos.map((s, idx) => (
-                <img key={idx} src={isDark ? s.darkSrc : s.lightSrc} alt={s.alt} className="h-20 object-contain mx-6" />
+                <img
+                  key={idx}
+                  src={isDark ? s.darkSrc : s.lightSrc}
+                  alt={s.alt}
+                  className="h-20 object-contain mx-6"
+                />
               ))}
             </div>
           </div>

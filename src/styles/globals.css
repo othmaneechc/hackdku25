@@ -133,3 +133,11 @@ html {
   font-stretch: expanded;
   text-transform: uppercase;
 }
+
+.countdown{
+    /* Temporarily showing headings with JetBrains Mono */
+    @apply font-bold font-mono tracking-widest;
+    letter-spacing: 0.05em;
+    font-stretch: expanded;
+    text-transform: uppercase;
+}
