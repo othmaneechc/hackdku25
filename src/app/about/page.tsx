@@ -105,7 +105,7 @@ const outreachTeam = [
     major: "Data Science",
     email: "wiam.benadder@duke.edu",
     linkedin: "#",
-    picture: "/team/wiam.png",
+    picture: "/team/wiam1.png",
   },
   {
     name: "Ruiaheng (Rosa) Sun",
