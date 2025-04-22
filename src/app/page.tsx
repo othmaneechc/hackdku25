@@ -33,7 +33,7 @@ const judges: Judge[] = [
     role: "",
     major: "Founder & CEO @ Quantum Life",
     email: "",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/christineyuanhuang1005/",
     picture: "/speakers/drchristine.png",
   },
   {
@@ -41,7 +41,7 @@ const judges: Judge[] = [
     role: "",
     major: "AI/ML Engineering Specialist @ L'Oreal",
     email: "",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/jksmb/?originalSubdomain=cn",
     picture: "/speakers/camilo.png",
   },
   {
