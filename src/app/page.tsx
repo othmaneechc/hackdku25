@@ -62,7 +62,7 @@ function Countdown({ target }: { target: string }) {
       ] as const).map(({ label, value }) => (
         <div
           key={label}
-          className="w-24 sm:w-28 md:w-32 rounded-2xl shadow-lg p-4 bg-white/80 dark:bg-white/10 backdrop-blur"
+          className="w-20 sm:w-28 md:w-32 rounded-2xl shadow-lg p-4 bg-white/80 dark:bg-white/10 backdrop-blur"
         >
           <p className="text-3xl md:text-4xl font-bold leading-none">
             {value.toString().padStart(2, "0")}
@@ -262,9 +262,9 @@ export default function Home() {
         </p>
         <p className="max-w-5xl text-sm sm:text-base leading-7 text-muted-foreground">
           Beyond coding sprints, enjoy speaker sessions, workshops, and tracks in{' '}
-          <code className="text-amber-500">Finance</code>,{' '}
-          <code className="text-violet-500">Healthcare/Biotech</code>, and{' '}
-          <code className="text-green-500">Environment/Sustainability</code>. All backgrounds welcome!
+          <code className="text-amber-600">Finance</code>,{' '}
+          <code className="text-violet-600">Healthcare/Biotech</code>, and{' '}
+          <code className="text-green-600">Environment/Sustainability</code>. All backgrounds welcome!
         </p>
       </div>
 
@@ -279,31 +279,18 @@ export default function Home() {
       <div id="tracks" className="container mt-20 max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">Hackathon Tracks</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              title: 'Finance',
-              color: 'amber',
-              blurb: 'Innovative financial technologies & new approaches.',
-            },
-            {
-              title: 'Healthcare / Biotech',
-              color: 'violet',
-              blurb: 'Advances in healthcare, biotech & life sciences.',
-            },
-            {
-              title: 'Environment / Sustainability',
-              color: 'green',
-              blurb: 'Solutions for environmental protection.',
-            },
-          ].map((t) => (
-            <div
-              key={t.title}
-              className={`p-6 border-4 border-${t.color}-500 rounded-lg`}
-            >
-              <h3 className="text-xl font-bold">{t.title}</h3>
-              <p className="mt-2 text-sm">{t.blurb}</p>
-            </div>
-          ))}
+        <div key="Finance" className={`p-6 border-4 border-amber-600 rounded-lg`}>
+              <h3 className="text-xl font-bold">Finance</h3>
+              <p className="mt-2 text-sm">Innovative financial technologies & new approaches.</p>
+        </div>
+        <div key="Healthcare / Biotech" className={`p-6 border-4 border-violet-600 rounded-lg`}>
+              <h3 className="text-xl font-bold">Healthcare / Biotech</h3>
+              <p className="mt-2 text-sm">Advances in healthcare, biotech & life sciences.</p>
+        </div>
+        <div key="Environment / Sustainability" className={`p-6 border-4 border-green-600 rounded-lg`}>
+              <h3 className="text-xl font-bold">Environment / Sustainability</h3>
+              <p className="mt-2 text-sm">Solutions for environmental protection.</p>
+        </div>
         </div>
       </div>
 
