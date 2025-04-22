@@ -15,6 +15,7 @@ const sponsors = [
   { lightSrc: "/sponsors/dnas.png", darkSrc: "/sponsors/dnaswhite.png", alt: "DNAS" },
   { lightSrc: "/sponsors/ca.png", darkSrc: "/sponsors/cawhite.png", alt: "CA" },
   { lightSrc: "/sponsors/aws.png", darkSrc: "/sponsors/awswhite.png", alt: "AWS" },
+  { lightSrc: "/sponsors/wangcai.png", darkSrc: "/sponsors/wangcaiwhite.png", alt: "lab" },
 ];
 
 // ---- Judges ----
