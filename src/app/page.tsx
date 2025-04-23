@@ -121,12 +121,12 @@ const judges: Judge[] = [
     picture: "/speakers/camilo.png",
   },
   {
-    name: "TBC",
+    name: "Nick Ponomarev",
     role: "",
-    major: "",
+    major: "Senior Investment Analyst @ ORBIT Startups",
     email: "",
-    linkedin: "#",
-    picture: "/team/sam.png",
+    linkedin: "https://www.linkedin.com/in/nikitaponomarev/",
+    picture: "/speakers/nick.png",
   },
 ];
 
@@ -154,6 +154,12 @@ const speakers: Speaker[] = [
     bio: `Dr. Joong‑Tak Yoon is a postdoctoral research fellow in biology at Duke Kunshan University. He earned both his B.S. and Ph.D. in Systems Biology from Yonsei University—publishing in journals like Journal of Experimental Botany and Planta—and won the Brain Korea 21 Grand Prize. With extensive experience as a lab instructor and presenter at international conferences, he specializes in plant molecular biology, protein function and genetic engineering. Dr. Yoon will lead HackDKU ’25’s hands‑on plasmid‑design workshop using SnapGene, sharing practical insights from his award‑winning research and teaching.`,
     picture: "/speakers/yoon.png",
   },
+  // {
+  //   name: "Nick Ponomarev",
+  //   title: "Senior Investment Analyst • ORBIT Startups",
+  //   bio: `Nick Ponomarev is a senior investement analyst at ORBIT Startups. He 22 was the strategy lead and portfolio manager for 22 companies valued at $360 million and fund position in companies worth US$18M, acting as strategy lead, interim CFO, and raising direct investments from institutional investors worldwide. He has a background in finance and investment, with a focus on venture capital and private equity. Nick has worked with various startups and has a deep understanding of the startup ecosystem. He is passionate about helping entrepreneurs succeed and is dedicated to supporting the growth of innovative companies.`,
+  //   picture: "/speakers/nick.png",
+  // },
 ];
 
 /************************

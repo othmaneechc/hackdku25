@@ -62,7 +62,7 @@ export default function TimelinePage() {
               <tr>
                 <td className="px-4 py-2 border">12:00 - 13:00</td>
                 <td className="px-4 py-2 border">Lunch Break</td>
-                <td className="px-4 py-2 border">Executive Dining Hall</td>
+                <td className="px-4 py-2 border">AB Dining Hall</td>
                 <td className="px-4 py-2 border">Lunch provided for participants</td>
               </tr>
               <tr>
@@ -74,13 +74,13 @@ export default function TimelinePage() {
               <tr>
                 <td className="px-4 py-2 border">14:00 - 15:00</td>
                 <td className="px-4 py-2 border">Biotech Workshop</td>
-                <td className="px-4 py-2 border">IB 1047</td>
+                <td className="px-4 py-2 border">IB Lecture Hall</td>
                 <td className="px-4 py-2 border">SnapGene</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">15:00 - 16:00</td>
                 <td className="px-4 py-2 border">Fintech workshop</td>
-                <td className="px-4 py-2 border">IB 1047</td>
+                <td className="px-4 py-2 border">IB Lecture Hall</td>
                 <td className="px-4 py-2 border">TBD</td>
               </tr>
               <tr>
