@@ -301,7 +301,7 @@ export default function Home() {
       </div>
 
       {/* Sponsors */}
-      <div className="w-full mt-20 mb-10 text-center">
+      <div id="sponsors-carousel" className="w-full mt-20 mb-10 text-center">
         <h2 className="text-4xl font-bold mb-10 container mx-auto">Our Sponsors</h2>
         <div className="marquee-container">
           <div className="marquee">
