@@ -73,9 +73,9 @@ export default function TimelinePage() {
               </tr>
               <tr>
                 <td className="px-4 py-2 border">14:00 - 15:00</td>
-                <td className="px-4 py-2 border">Biotech Workshop</td>
+                <td className="px-4 py-2 border">Biotech Workshop: Intro to SnapGene</td>
                 <td className="px-4 py-2 border">IB Lecture Hall</td>
-                <td className="px-4 py-2 border">SnapGene</td>
+                <td className="px-4 py-2 border">Joong‑Tak Yoon, Postdoctoral Research Fellow @ DKU</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">15:00 - 16:00</td>
@@ -86,7 +86,7 @@ export default function TimelinePage() {
               <tr>
                 <td className="px-4 py-2 border">16:00 - 18:00</td>
                 <td className="px-4 py-2 border">Hacking continues...</td>
-                <td className="px-4 py-2 border">IB Team Room</td>
+                <td className="px-4 py-2 border">IB Team Rooms</td>
                 <td className="px-4 py-2 border">Teams work on their projects</td>
               </tr>
               <tr>
