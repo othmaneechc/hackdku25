@@ -68,7 +68,7 @@ export default function TimelinePage() {
               <tr>
                 <td className="px-4 py-2 border">13:00 - 14:00</td>
                 <td className="px-4 py-2 border">AI Workshop</td>
-                <td className="px-4 py-2 border">IB 1047</td>
+                <td className="px-4 py-2 border">IB Lecture Hall</td>
                 <td className="px-4 py-2 border">Led by Amazon Web Services (AWS)</td>
               </tr>
               <tr>
