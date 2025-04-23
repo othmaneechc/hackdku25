@@ -68,32 +68,32 @@ export default function TimelinePage() {
               <tr>
                 <td className="px-4 py-2 border">13:00 - 14:00</td>
                 <td className="px-4 py-2 border">AI Workshop</td>
-                <td className="px-4 py-2 border">TBD</td>
+                <td className="px-4 py-2 border">IB 1047</td>
                 <td className="px-4 py-2 border">Led by Amazon Web Services (AWS)</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">14:00 - 15:00</td>
                 <td className="px-4 py-2 border">Biotech Workshop</td>
-                <td className="px-4 py-2 border">TBD</td>
+                <td className="px-4 py-2 border">IB 1047</td>
                 <td className="px-4 py-2 border">SnapGene</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">15:00 - 16:00</td>
                 <td className="px-4 py-2 border">Fintech workshop</td>
-                <td className="px-4 py-2 border">TBD</td>
+                <td className="px-4 py-2 border">IB 1047</td>
                 <td className="px-4 py-2 border">TBD</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">16:00 - 18:00</td>
                 <td className="px-4 py-2 border">Hacking continues...</td>
-                <td className="px-4 py-2 border">AB Team Room</td>
+                <td className="px-4 py-2 border">IB Team Room</td>
                 <td className="px-4 py-2 border">Teams work on their projects</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">18:00 - 22:00</td>
                 <td className="px-4 py-2 border">Mentorship Office Hours</td>
                 <td className="px-4 py-2 border">
-                  AB Team rooms (check Instructions page)
+                  IB 1047 (check Instructions page)
                 </td>
                 <td className="px-4 py-2 border">Mentors available for guidance</td>
               </tr>
@@ -123,23 +123,56 @@ export default function TimelinePage() {
               <tr>
                 <td className="px-4 py-2 border">13:00 - 16:00</td>
                 <td className="px-4 py-2 border">Judging and Project Presentations</td>
-                <td className="px-4 py-2 border">IB Theatre</td>
+                <td className="px-4 py-2 border">AB Auditorium (2220)</td>
                 <td className="px-4 py-2 border">Teams present their projects</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">16:30 - 17:00</td>
                 <td className="px-4 py-2 border">Closing Speech</td>
-                <td className="px-4 py-2 border">TBD</td>
+                <td className="px-4 py-2 border">AB Auditorium (2220)</td>
                 <td className="px-4 py-2 border">Final remarks and thank you</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">17:00 - 17:30</td>
                 <td className="px-4 py-2 border">Awarding and Closing Ceremony</td>
-                <td className="px-4 py-2 border">AB Auditorium</td>
+                <td className="px-4 py-2 border">AB Auditorium (2220)</td>
                 <td className="px-4 py-2 border">Awards and recognition</td>
               </tr>
             </tbody>
           </table>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold mb-4 mt-10 font-mono">Canteen Open Hours (Community Center)</h2>
+          <div className="p-4 rounded-lg">
+            <ul className="space-y-2">
+              <li>
+                <span className="font-semibold">Breakfast:</span> 7:00 - 9:30
+              </li>
+              <li>
+                <span className="font-semibold">Lunch:</span> 11:00 - 13:30
+              </li>
+              <li>
+                <span className="font-semibold">Dinner:</span> 17:00 - 19:30
+              </li>
+            </ul>
+            <p className="mt-4 text-sm italic">
+              1st floor Cafeteria and Salad Bar are open all day
+            </p>
+          </div>
+          <div className="mt-4 rounded-lg overflow-hidden shadow-lg">
+            <img src="/images/map.png" alt="Canteen Location Map" />
+          </div>
+        </section>
+        <section>
+          <div className="p-4 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4 mt-10 font-mono">Important Notes</h2>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>All times are in BJT (Beijing Standard Time)</li>
+              <li>Check the Instructions page for more details on team rooms and mentorship office hours.</li>
+              <li>Food will be provided during the event.</li>
+              <li>Make sure to submit your projects on time!</li>
+            </ul>
+          </div>
         </section>
       </div>
     </div>
