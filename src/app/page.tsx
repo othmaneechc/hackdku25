@@ -154,12 +154,18 @@ const speakers: Speaker[] = [
     bio: `Dr. Joong‑Tak Yoon is a postdoctoral research fellow in biology at Duke Kunshan University. He earned both his B.S. and Ph.D. in Systems Biology from Yonsei University—publishing in journals like Journal of Experimental Botany and Planta—and won the Brain Korea 21 Grand Prize. With extensive experience as a lab instructor and presenter at international conferences, he specializes in plant molecular biology, protein function and genetic engineering. Dr. Yoon will lead HackDKU ’25’s hands‑on plasmid‑design workshop using SnapGene, sharing practical insights from his award‑winning research and teaching.`,
     picture: "/speakers/yoon.png",
   },
-  // {
-  //   name: "Nick Ponomarev",
-  //   title: "Senior Investment Analyst • ORBIT Startups",
-  //   bio: `Nick Ponomarev is a senior investement analyst at ORBIT Startups. He 22 was the strategy lead and portfolio manager for 22 companies valued at $360 million and fund position in companies worth US$18M, acting as strategy lead, interim CFO, and raising direct investments from institutional investors worldwide. He has a background in finance and investment, with a focus on venture capital and private equity. Nick has worked with various startups and has a deep understanding of the startup ecosystem. He is passionate about helping entrepreneurs succeed and is dedicated to supporting the growth of innovative companies.`,
-  //   picture: "/speakers/nick.png",
-  // },
+  {
+    name: "Liang Guo",
+    title: "Co-founder • Guoshu (Huzhou) Intelligent Technology Co., Ltd.",
+    bio: `Liang Guo is a co-founder of Guoshu (Huzhou) Intelligent Technology Co., Ltd. He has extensive experience in the field of artificial intelligence and has worked on various projects related to AI applications in different industries. Guoshu Intelligence is a company focusing on the application of brain-inspired intelligence in the financial field, and has carried out cooperation with the ISTBI of Fudan University. Liang Guo will lead a workshop about the application of brain-inspired intelligence in the financial field`,
+    picture: "/speakers/liangguo.png",
+  },
+  {
+    name: "Luyao Zhang",
+    title: "Assistant Professor of Economics • DKU",
+    bio: `Dr. Luyau Zhang is an Assistant Professor of Economics at DKU, Senior Research Scientist at the Digital Innovation Research Center, Founding Advisor of DKU Finance and AI Clubs, and Pioneering Interdisciplinary Research at the interplay of computational and economic science on groundbreaking technologies. Dr. Zhang will lead workshop where she plans to introduce the concept of agentic finance, focusing on the development of multi-agent intelligence systems to address global financial sustainability challenges. Participants will learn about the principles and applications of agentic finance, and how it can be used to create innovative solutions for sustainable financial practices.`,
+    picture: "/chairs/luyao.png",
+  },
 ];
 
 /************************
