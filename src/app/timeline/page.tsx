@@ -30,25 +30,25 @@ export default function TimelinePage() {
                 <td className="px-4 py-2 border">Participants register for the event</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">10:10-10:20</td>
+                <td className="px-4 py-2 border">10:10-10:25</td>
                 <td className="px-4 py-2 border">Opening Ceremony</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
                 <td className="px-4 py-2 border">Dr. Feng Tian, Chair of the DKU Division of Natural Sciences</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">10:20-10:25</td>
+                <td className="px-4 py-2 border">10:25-10:35</td>
                 <td className="px-4 py-2 border">Hackathon Instructions</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
-                <td className="px-4 py-2 border">Guanzhi (Allen) Su, HackDKU Organizer</td>
+                <td className="px-4 py-2 border">Guangzhi (Allen) Su, HackDKU Organizer</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">10:30 - 11:00</td>
+                <td className="px-4 py-2 border">10:40 - 11:25</td>
                 <td className="px-4 py-2 border">Keynote Speech (Biotech)</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
                 <td className="px-4 py-2 border">Christine Huang, Founder & CEO @ Quantum Life</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">11:00 - 12:00</td>
+                <td className="px-4 py-2 border">11:30 - 12:00</td>
                 <td className="px-4 py-2 border">Team formation session</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
                 <td className="px-4 py-2 border">Participants form teams</td>
@@ -84,18 +84,16 @@ export default function TimelinePage() {
                 <td className="px-4 py-2 border">Luyao Zhang, Assistant Professor of Economics @ DKU</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">16:00 - 18:00</td>
+                <td className="px-4 py-2 border">16:00 - 21:00</td>
+                <td className="px-4 py-2 border">Mentorship Office Hours</td>
+                <td className="px-4 py-2 border">IB 1047 (check Instructions page)</td>
+                <td className="px-4 py-2 border">Mentors available for guidance</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border">21:00 - 00:00</td>
                 <td className="px-4 py-2 border">Hacking continues...</td>
                 <td className="px-4 py-2 border">IB Team Rooms</td>
                 <td className="px-4 py-2 border">Teams work on their projects</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-2 border">18:00 - 22:00</td>
-                <td className="px-4 py-2 border">Mentorship Office Hours</td>
-                <td className="px-4 py-2 border">
-                  IB 1047 (check Instructions page)
-                </td>
-                <td className="px-4 py-2 border">Mentors available for guidance</td>
               </tr>
             </tbody>
           </table>
