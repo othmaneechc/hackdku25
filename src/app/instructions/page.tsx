@@ -212,7 +212,7 @@ export default function Instructions() {
         {/* Replace the existing anchor elements with two identically-styled buttons */}
         <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 mt-4 mb-10">
           <Link
-            href="https://hackdku2025.devpost.com/"
+            href="https://docs.google.com/spreadsheets/d/14IsbKkEmOnrcA2wEi-LiJyfYWiTlwQOceX4-aKoyPd8/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className={sharedButtonClasses}
