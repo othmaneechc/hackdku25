@@ -166,6 +166,18 @@ const speakers: Speaker[] = [
     bio: `Dr. Luyau Zhang is an Assistant Professor of Economics at DKU, Senior Research Scientist at the Digital Innovation Research Center, Founding Advisor of DKU Finance and AI Clubs, and Pioneering Interdisciplinary Research at the interplay of computational and economic science on groundbreaking technologies. Dr. Zhang will lead workshop where she plans to introduce the concept of agentic finance, focusing on the development of multi-agent intelligence systems to address global financial sustainability challenges. Participants will learn about the principles and applications of agentic finance, and how it can be used to create innovative solutions for sustainable financial practices.`,
     picture: "/chairs/luyao.png",
   },
+  {
+    name: "Xu Tingyu",
+    title: "Business Development Representative • AWS",
+    bio: `Xu Tingyu is a Business Development Representative at AWS. He specializes in go-to-market strategies for GenAI solutions and will present on the GenAI-powered Coding Assistant, demonstrating how developers can seamlessly integrate AI-driven code generation into their workflows using AWS services.`,
+    picture: "/speakers/xutingyu.png",
+  },
+  {
+    name: "Shi Qiao",
+    title: "Senior GenAI GTM Specialist • AWS",
+    bio: `Shi Qiao is a Senior Go-to-Market Specialist for Generative AI at AWS. With a focus on developer enablement and AI adoption, he will co-present the GenAI-powered Coding Assistant, sharing best practices for leveraging AWS’s AI stack to accelerate coding productivity.`,
+    picture: "/speakers/shiqiao.png",
+  },
 ];
 
 /************************
