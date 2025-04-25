@@ -33,7 +33,7 @@ export default function TimelinePage() {
                 <td className="px-4 py-2 border">10:10-10:20</td>
                 <td className="px-4 py-2 border">Opening Ceremony</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
-                <td className="px-4 py-2 border">Welcome speech and introduction</td>
+                <td className="px-4 py-2 border">Dr. Feng Tian, Chair of the DKU Division of Natural Sciences</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">10:20-10:25</td>
@@ -48,13 +48,7 @@ export default function TimelinePage() {
                 <td className="px-4 py-2 border">Christine Huang, Founder & CEO @ Quantum Life</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">11:00 - 11:30</td>
-                <td className="px-4 py-2 border">Keynote speech (AI / Fintech)</td>
-                <td className="px-4 py-2 border">AB Auditorium (2220)</td>
-                <td className="px-4 py-2 border">TBD</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-2 border">11:30 - 12:00</td>
+                <td className="px-4 py-2 border">11:00 - 12:00</td>
                 <td className="px-4 py-2 border">Team formation session</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
                 <td className="px-4 py-2 border">Participants form teams</td>
