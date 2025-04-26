@@ -296,7 +296,7 @@ export default function Home() {
       <div className="container max-w-5xl mx-auto mb-4 text-center">
         <h2 className="text-3xl font-bold mb-4">Hackathon Starts In</h2>
         {/* Adjust start time here */}
-        <Countdown target="2025-04-26T09:00:00" />
+        <Countdown target="2025-04-26T10:00:00" />
       </div>
 
       {/* Tracks */}
