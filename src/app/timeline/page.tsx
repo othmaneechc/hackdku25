@@ -60,31 +60,31 @@ export default function TimelinePage() {
                 <td className="px-4 py-2 border">Lunch provided for participants</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">13:00 - 14:00</td>
+                <td className="px-4 py-2 border">13:00 - 14:30</td>
                 <td className="px-4 py-2 border">GenAI-powered Coding Assistant Workshop</td>
                 <td className="px-4 py-2 border">IB Lecture Hall</td>
                 <td className="px-4 py-2 border">Shi Qiao & Xu Tingyu, Amazon Web Services (AWS)</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">14:00 - 15:00</td>
+                <td className="px-4 py-2 border">14:30 - 15:30</td>
                 <td className="px-4 py-2 border">Intro to SnapGene Workshop</td>
                 <td className="px-4 py-2 border">IB Lecture Hall</td>
                 <td className="px-4 py-2 border">Joong‑Tak Yoon, Postdoctoral Research Fellow @ DKU</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">15:00 - 15:30</td>
+                <td className="px-4 py-2 border">15:30 - 16:00</td>
                 <td className="px-4 py-2 border">Financial Intelligence Workshop</td>
                 <td className="px-4 py-2 border">IB Lecture Hall</td>
                 <td className="px-4 py-2 border">Liang Guo, Co-founder @ Guoshu Intelligent Technology Co.</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">15:30 - 16:00</td>
+                <td className="px-4 py-2 border">16:00 - 16:30</td>
                 <td className="px-4 py-2 border">Agentic Finance Workshop</td>
                 <td className="px-4 py-2 border">IB Lecture Hall</td>
                 <td className="px-4 py-2 border">Luyao Zhang, Assistant Professor of Economics @ DKU</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">16:00 - 21:00</td>
+                <td className="px-4 py-2 border">16:30 - 21:00</td>
                 <td className="px-4 py-2 border">Mentorship Office Hours</td>
                 <td className="px-4 py-2 border">IB 1047 (check Instructions page)</td>
                 <td className="px-4 py-2 border">Mentors available for guidance</td>
