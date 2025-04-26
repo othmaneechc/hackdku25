@@ -74,13 +74,13 @@ export default function TimelinePage() {
               <tr>
                 <td className="px-4 py-2 border">15:30 - 16:00</td>
                 <td className="px-4 py-2 border">Financial Intelligence Workshop</td>
-                <td className="px-4 py-2 border">IB Lecture Hall</td>
+                <td className="px-4 py-2 border">IB 1047</td>
                 <td className="px-4 py-2 border">Liang Guo, Co-founder @ Guoshu Intelligent Technology Co.</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border">16:00 - 16:30</td>
                 <td className="px-4 py-2 border">Agentic Finance Workshop</td>
-                <td className="px-4 py-2 border">IB Lecture Hall</td>
+                <td className="px-4 py-2 border">IB 1047</td>
                 <td className="px-4 py-2 border">Luyao Zhang, Assistant Professor of Economics @ DKU</td>
               </tr>
               <tr>
