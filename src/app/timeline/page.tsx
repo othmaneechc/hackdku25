@@ -115,23 +115,23 @@ export default function TimelinePage() {
               <tr>
                 <td className="px-4 py-2 border">11:00 - 12:00</td>
                 <td className="px-4 py-2 border">Deadline for Project Submission</td>
-                <td className="px-4 py-2 border">TBD</td>
+                <td className="px-4 py-2 border"><a href="https://hackdku2025.devpost.com/" target="_blank" rel="noopener noreferrer">https://hackdku2025.devpost.com/</a></td>
                 <td className="px-4 py-2 border">Submission on DevPost</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">13:00 - 16:00</td>
+                <td className="px-4 py-2 border">13:00 - 17:00</td>
                 <td className="px-4 py-2 border">Judging and Project Presentations</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
-                <td className="px-4 py-2 border">Teams present their projects</td>
+                <td className="px-4 py-2 border">Teams present their projects (check Instructions page)</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">16:30 - 17:00</td>
+                <td className="px-4 py-2 border">17:00 - 17:20</td>
                 <td className="px-4 py-2 border">Closing Speech</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
-                <td className="px-4 py-2 border">Final remarks and thank you</td>
+                <td className="px-4 py-2 border">Dr. Linfeng Huang, Associate Professor of Biology @ DKU</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">17:00 - 17:30</td>
+                <td className="px-4 py-2 border">17:20 - 18:00</td>
                 <td className="px-4 py-2 border">Awarding and Closing Ceremony</td>
                 <td className="px-4 py-2 border">AB Auditorium (2220)</td>
                 <td className="px-4 py-2 border">Awards and recognition</td>

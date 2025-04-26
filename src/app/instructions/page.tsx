@@ -2,7 +2,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import s from "./instructions.module.scss";
 
 const steps = [
@@ -120,7 +120,7 @@ const PixelCanvas = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     const pixels: Pixel[] = [];
-    const colors = ["#2E46E6", "#5780AA", "#4AAA54"];
+    const colors = ["#2E46E6", "#5780AA", "4AAA54"];
     const gap = 10;
     const speed = 0.035;
 
@@ -163,6 +163,7 @@ const PixelCanvas = () => {
 };
 
 export default function Instructions() {
+  const [showOrder, setShowOrder] = useState(false);
   // Shared button styling to be used for both buttons
   const sharedButtonClasses = cn(
     buttonVariants({ size: "lg", variant: "secondary" }),
@@ -209,7 +210,6 @@ export default function Instructions() {
         <p className="mt-4">
           See below schedule and locations to access HackDKU mentorship.
         </p>
-        {/* Replace the existing anchor elements with two identically-styled buttons */}
         <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 mt-4 mb-10">
           <Link
             href="https://docs.google.com/spreadsheets/d/14IsbKkEmOnrcA2wEi-LiJyfYWiTlwQOceX4-aKoyPd8/edit?usp=sharing"
@@ -220,7 +220,85 @@ export default function Instructions() {
             Mentorship Hours
           </Link>
         </div>
-        <h2 className="text-2xl font-semibold mt-8 text-center mb-4">
+        
+        <h2 className="text-2xl font-semibold mt-12 text-center mb-4">
+          Judging Schedule
+        </h2>
+
+        <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 mt-4 mb-10">
+          <Link
+            href="https://docs.google.com/spreadsheets/d/11b_cbk2eWJaMXPuHmZ_6RWGrf1CRBJ12/edit?usp=sharing&ouid=115385604774058245515&rtpof=true&sd=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={sharedButtonClasses}
+          >
+            List of HACKDKU Teams
+          </Link>
+        </div>
+        <div className="overflow-auto">
+          <table className="w-full table-auto border-collapse">
+            <thead>
+              <tr>
+                <th className="border px-2 py-1">Block</th>
+                <th className="border px-2 py-1">Teams</th>
+                <th className="border px-2 py-1">Time Span</th>
+                <th className="border px-2 py-1">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-2 py-1">Block 1</td>
+                <td className="border px-2 py-1">1–5</td>
+                <td className="border px-2 py-1">13:00–13:40 (5×8 m)</td>
+                <td className="border px-2 py-1">6 m presentation + 2 m Q&A</td>
+              </tr>
+              <tr>
+                <td className="border px-2 py-1">Break</td>
+                <td className="border px-2 py-1">–</td>
+                <td className="border px-2 py-1">13:40–13:50 (10 m)</td>
+                <td className="border px-2 py-1">Score entry & stretch</td>
+              </tr>
+              <tr>
+                <td className="border px-2 py-1">Block 2</td>
+                <td className="border px-2 py-1">6–10</td>
+                <td className="border px-2 py-1">13:50–14:30 (5×8 m)</td>
+                <td className="border px-2 py-1"></td>
+              </tr>
+              <tr>
+                <td className="border px-2 py-1">Break</td>
+                <td className="border px-2 py-1">–</td>
+                <td className="border px-2 py-1">14:30–14:40 (10 m)</td>
+                <td className="border px-2 py-1"></td>
+              </tr>
+              <tr>
+                <td className="border px-2 py-1">Block 3</td>
+                <td className="border px-2 py-1">11–15</td>
+                <td className="border px-2 py-1">14:40–15:20 (5×8 m)</td>
+                <td className="border px-2 py-1"></td>
+              </tr>
+              <tr>
+                <td className="border px-2 py-1">Break</td>
+                <td className="border px-2 py-1">–</td>
+                <td className="border px-2 py-1">15:20–15:30 (10 m)</td>
+                <td className="border px-2 py-1"></td>
+              </tr>
+              <tr>
+                <td className="border px-2 py-1">Block 4</td>
+                <td className="border px-2 py-1">16–20</td>
+                <td className="border px-2 py-1">15:30–16:10 (5×8 m)</td>
+                <td className="border px-2 py-1"></td>
+              </tr>
+              <tr>
+                <td className="border px-2 py-1">Deliberation</td>
+                <td className="border px-2 py-1">–</td>
+                <td className="border px-2 py-1">16:10–16:40 (30 m)</td>
+                <td className="border px-2 py-1">Final scoring, tie‑breakers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-2xl font-semibold mt-12 text-center mb-4">
           Judging Criteria
         </h2>
         <div className="mt-2 space-y-4">
@@ -237,7 +315,8 @@ export default function Instructions() {
             <strong>Overall Presentation:</strong> How convincing is the pitch? Was it well prepared, and did the hackers effectively articulate the scope and impact of their problem?
           </p>
         </div>
-        <h2 className="text-2xl font-semibold mt-8 text-center mb-4">
+
+        <h2 className="text-2xl font-semibold mt-12 text-center mb-4">
           Submission
         </h2>
         <p>
@@ -247,14 +326,14 @@ export default function Instructions() {
           and then link the relevant repository on DevPost.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4 mt-4 mb-10">
-        <Link
+          <Link
             href="https://hackdku2025.devpost.com/"
             target="_blank"
             rel="noopener noreferrer"
             className={sharedButtonClasses}
           >
             DevPost Website
-        </Link>
+          </Link>
         </div>
       </section>
     </main>
