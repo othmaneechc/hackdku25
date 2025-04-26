@@ -47,7 +47,7 @@ function Countdown({ target }: { target: string }) {
   if (Object.values(timeLeft).every((v) => v === 0)) {
     return (
       <div className="text-center">
-        <h2 className="text-4xl font-bold mb-4">HackDKU is live! 🚀</h2>
+        <h2 className="text-4xl font-bold mb-4">HackDKU has ended!</h2>
       </div>
     );
   }
@@ -294,9 +294,9 @@ export default function Home() {
 
       {/* Countdown to hackathon */}
       <div className="container max-w-5xl mx-auto mb-4 text-center">
-        <h2 className="text-3xl font-bold mb-4"></h2>
+        <h2 className="text-3xl font-bold mb-4">HackDKU ends in</h2>
         {/* Adjust start time here */}
-        <Countdown target="2025-04-26T10:00:00" />
+        <Countdown target="2025-04-27T12:00:00" />
       </div>
 
       {/* Tracks */}
