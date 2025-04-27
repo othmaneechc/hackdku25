@@ -277,6 +277,13 @@ export default function Home() {
       <div className="mb-20" />
       <Splash />
 
+      {/* Countdown to hackathon */}
+      <div className="container max-w-5xl mx-auto mb-4 text-center">
+        <h2 className="text-3xl font-bold mb-4"></h2>
+        {/* Adjust start time here */}
+        <Countdown target="2025-04-27T17:00:00" />
+      </div>
+      
       {/* Intro */}
       <div className="container p-10 flex max-w-5xl flex-col items-center gap-4 text-center">
         <h2 className="text-4xl font-bold mt-6 mb-6">Welcome to HackDKU!</h2>
@@ -290,13 +297,6 @@ export default function Home() {
           <code className="text-violet-600">Healthcare/Biotech</code>, and{' '}
           <code className="text-green-600">Environment/Sustainability</code>. All backgrounds welcome!
         </p>
-      </div>
-
-      {/* Countdown to hackathon */}
-      <div className="container max-w-5xl mx-auto mb-4 text-center">
-        <h2 className="text-3xl font-bold mb-4"></h2>
-        {/* Adjust start time here */}
-        <Countdown target="2025-04-27T17:00:00" />
       </div>
 
       {/* Tracks */}
