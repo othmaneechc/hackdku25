@@ -124,12 +124,12 @@ const outreachTeam = [
     picture: "/team/bouchra.png",
   },
   {
-    name: "Yanpei Yu",
-    role: "Software Team Member",
-    major: "Data Science",
-    email: "yy475@duke.edu",
-    linkedin: "https://www.linkedin.com/in/yanpei-yu/",
-    picture: "/team/yanpei.png",
+    name: "Zhuohang Liu",
+    role: "Outreach Team Member",
+    major: "AMaCS Computer Science",
+    email: "zl429@duke.edu",
+    linkedin: "https://www.linkedin.com/in/zhuohang-anthony-liu-%E5%88%98%E5%8D%93%E8%88%AA-9357b5362/",
+    picture: "/team/zhuohang.png",
   },
 ];
 
@@ -212,6 +212,33 @@ const softwareTeam = [
     email: "yy475@duke.edu",
     linkedin: "https://www.linkedin.com/in/yanpei-yu/",
     picture: "/team/yanpei.png",
+  },
+  // {
+  //   name: "Enqi Du",
+  //   role: "Software Team Member",
+  //   major: "",
+  //   email: "placeholder@example.com",
+  //   linkedin: "#",
+  //   picture: "/team/placeholder.png",
+  // },
+];
+
+const mediaTeam = [
+  {
+    name: "Tianyao Wang",
+    role: "Media Team Member",
+    major: "AMaCS Mathematics",
+    email: "Jerome6066@gmail.com",
+    linkedin: "/",
+    picture: "/team/tianyao.png",
+  },
+  {
+    name: "Chenlei (Sarah) Tao",
+    role: "Media Team Member",
+    major: "AMaCS Mathematics",
+    email: "ct368@duke.edu",
+    linkedin: "www.linkedin.com/in/ChenleiTao",
+    picture: "/team/chenlei.png",
   },
   // {
   //   name: "Enqi Du",
@@ -330,6 +357,9 @@ export default function AboutPage() {
 
         <h3 className="text-center text-2xl font-bold mt-8">Software Team</h3>
         {renderGrid(softwareTeam)}
+
+        <h3 className="text-center text-2xl font-bold mt-8">Media Team</h3>
+        {renderGrid(mediaTeam)}
       </div>
     </main>
   );
